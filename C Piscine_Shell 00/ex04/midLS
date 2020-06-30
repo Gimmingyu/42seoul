@@ -1,1 +1,1 @@
-ls -p -m
+ls -pmUt
