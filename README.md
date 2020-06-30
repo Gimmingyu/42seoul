@@ -2,7 +2,7 @@
 2기 1차: 이노베이션 아카데미 Piscine
 
 <details>
-<summary>Shell</summary>
+<summary>Shell: 파일크기지정, chmod, hard_symbolic_link, klist, ls, git, cat, find </summary>
  
 ## 특정 크기로 지정하여 파일 만들기
 
