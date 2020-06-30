@@ -19,7 +19,7 @@ rm testShell00
 <br>
 
 ## Exercise 02: Oh yeah, mooore...
-[#파일크기지정](README.md#특정-크기로-지정하여-파일-만들기), [#chmod](../README.md#chmod-change-mode), [#hard_symbolic_link](../README.md#hard-symbolic-link), [#ln](../README.md#ln)
+[#파일크기지정](README.md#특정-크기로-지정하여-파일-만들기), [#chmod](../README.md#chmod-change-mode), [#hard_symbolic_link](../README.md#hard-symbolic-link)
 ```bash
 mkdir ex02
 cd ex02
