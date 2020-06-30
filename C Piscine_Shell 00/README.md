@@ -7,7 +7,7 @@ vi Z          # Z 입력
 <br>
 
 ## Exercise 01: testShell00
-[#파일크기지정](README.md#특정-크기로-지정하여-파일-만들기), [#chmod](../README.md#chmod-change-mode)
+[#파일크기지정](README.md#특정-크기로-지정하여-파일-만들기파일크기지정), [#chmod](../README.md#chmod-change-mode)
 ```bash
 mkdir ex01
 cd ex01
