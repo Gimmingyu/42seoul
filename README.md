@@ -67,4 +67,7 @@
       ```
 3. file
 변경 설정을 할 파일이나 디렉토리
+
+## Hard-Symbolic Link
+내용
 </details>
