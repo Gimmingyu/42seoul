@@ -63,6 +63,10 @@ klist -l > klist.txt
 ## Exercise 04: midLS
 [#ls](../README.md#ls)
 ```bash
+vi midLS    # midLS 내용은 아래 참고
+```
+```bash
+# midLS 내용
 ls -p -m
 ```
 <br>
@@ -70,6 +74,10 @@ ls -p -m
 ## Exercise 05: GiT commit
 [#git](../README.md#git)
 ```bash
+vi git_comment  # git_comment 내용은 아래 참고
+```
+```bash
+# git_comment 내용
 git log -n 5 --pretty=format:"%H"
 echo ""
 ```
@@ -78,8 +86,14 @@ echo ""
 ## Exercise 06: gitignore
 [#git](../README.md#git)
 ```bash
+vi gitignore    # gitignore 내용은 아래 참고
+```
+```bash
+# gitignore 내용
 git ls-files . --exclude-standard --ignored
 ```
+
+
 <br>
 
 ## Exercise 07: diff
@@ -134,5 +148,6 @@ find . \( -type f -name "*~" -o -name "#*" \) -print -delete
 vi ft_magic   # ft_magic 내용은 아래 참고
 ```
 ```bash
+# ft_magic 
 41 string 42  42 file
 ```
