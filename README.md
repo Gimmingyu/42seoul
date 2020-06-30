@@ -69,9 +69,56 @@
 변경 설정을 할 파일이나 디렉토리
 
 ## Hard-Symbolic Link
-윈도우로 치면 "바로가기" 같은 개념이다. 리눅스에도 특정 파일이나 디렉터리에 링크 기능을 제공하는데, 제목에서 보다시피 두 가지가 있다.
+윈도우로 치면 "바로가기" 같은 개념이다. 리눅스에도 특정 파일이나 디렉터리에 링크 기능을 제공하는데, 제목에서 보다시피 두 가지가 있다.<br>두 개 모두 처리하는 역할은 같지만 개념은 다르다.
 ```
 하드 링크(hard link)
 심볼릭 링크(symbolic link)
 ```
+1. 하드 링크(hard link)
+   * 원본 파일과 동일한 inode를 가진다<br>: 원본 파일이 삭제되더라도 원본 파일의 inode를 갖고 있는 링크 파일은 여전히 사용 가능
+   * 같은 inode를 가르키는 서로 다른 이름이라고 생각해도 될 듯. 원본이라는 개념이 없음
+   * 아래의 예제에서 ```test```의 inode인 ```787314```를 ```bbbb```도 동일하게 사용하는 것을 알 수 있다.
+   ```bash
+   echo "This is a test file" > test
+   ls -ali test
+   # 787314    -rw-r--r--    1    root    root    18    2020-06-29    15:23    test
+  
+   ln -s test aaaa    # make symbolic link file
+   ln test bbbb       # make hard link file
+   ls -ali
+   # 787313    drwxr-xr-x    2    root    root    4096    2020-06-29    15:25    .
+   # 787311    drwxr-xr-x    3    root    root    4096    2020-06-29    15:23    ..
+   # 787316    lrwxrwxrwx    1    root    root       4    2020-06-29    15:24    aaaa -> test
+   # 787314    -rw-r--r--    2    root    root      18    2020-06-29    15:24    bbbb
+   # 787314    -rw-r--r--    2    root    root      18    2020-06-29    15:23    test
+   ```
+2. 심볼릭 링크(symbolic link)
+   * 원본 파일의 이름을 가리키는 링크=원본 파일이 사라지면 망가짐
+   * 전혀 다른 파일이라도 원본 파일과 이름이 같다면 계속 사용이 가능함<br>주로 dynamic library의 so 파일과 연계해서 사용
+   * 아래 예제에서 ```aaaa```는 링크가 깨져서 접근이 불가. ```bbbb```는 사용 가능
+   * ```aaaa```를 다시 사용하기 위해서는 ```test```라는 이름을 가진 파일을 생성하면 된다.
+   ```bash
+   rm -rf test
+   ls -ali
+   # 787313    drwxr-xr-x    2    root    root    4096    2020-06-29    15:25    .
+   # 787311    drwxr-xr-x    3    root    root    4096    2020-06-29    15:23    ..
+   # 787316    lrwxrwxrwx    1    root    root       4    2020-06-29    15:24    aaaa -> test
+   # 787314    -rw-r--r--    1    root    root      18    2020-06-29    15:24    bbbb
+   
+   cat aaaa
+   # cat: aaaa: 그런 파일이나 디렉터리가 없습니다
+   
+   cat bbbb
+   # This is a test file
+   ```
+
+## klist
+
+## ls
+
+## git
+
+## cat
+
+## find
 </details>
