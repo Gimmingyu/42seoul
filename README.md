@@ -4,7 +4,7 @@
 <details>
 <summary>Shell: 파일크기지정, chmod, hard_symbolic_link, klist, ls, git, cat, find </summary>
  
-## 특정 크기로 지정하여 파일 만들기
+## 특정 크기로 지정하여 파일 만들기(파일크기지정)
 
 ```dd if=/dev/zero of=[file name] bs=[read size] count=[file size]```
 * ```/dev/zero```의 특수 장치에서 ```bs```만큼 지정된 사이즈 씩 읽어서 ```count```의 크기를 지닌 파일을 생성
