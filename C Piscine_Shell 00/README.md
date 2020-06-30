@@ -1,11 +1,12 @@
-# Exercise 00: Z
+## Exercise 00: Z
 ```
 mkdir ex00
 cd ex00
 vi Z          # Z 입력
 ```
 
-# Exercise 01: testShell00
+## Exercise 01: testShell00
+[#파일크기지정] [#chmod](../README.md#chmod-change-mode)
 ```
 mkdir ex01
 cd ex01
