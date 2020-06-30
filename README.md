@@ -2,12 +2,14 @@
 2기 1차: 이노베이션 아카데미 Piscine
 
 <details>
- <summary>특정 크기로 지정하여 파일 만들기</summary>
+<summary>Shell</summary>
  
+## 특정 크기로 지정하여 파일 만들기
+
 ```dd if=/dev/zero of=[file name] bs=[read size] count=[file size]```
 * ```/dev/zero```의 특수 장치에서 ```bs```만큼 지정된 사이즈 씩 읽어서 ```count```의 크기를 지닌 파일을 생성
 * ```dd if=/dev/zero of=test_file.img bs=4M count=256```: ```/dev/zero```에서 ```4M```씩 읽어서 ```256M```의 크기를 지닌 ```test_file.img``` 생성
-</details>
+
 
 ## chmod: CHange MODe
 * 대상 파일과 디렉토리의 사용권한을 변경할 때 사용
@@ -65,3 +67,4 @@
       ```
 3. file
 변경 설정을 할 파일이나 디렉토리
+</details>
