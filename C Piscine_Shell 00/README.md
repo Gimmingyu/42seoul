@@ -129,6 +129,7 @@ find . \( -type f -name "*~" -o -name "#*" \) -print -delete
 <br>
 
 ## Exercise 09: Illusion, not tricks, Michael...
+[#file](../README.md#file)
 ```bash
 vi ft_magic   # ft_magic 내용은 아래 참고
 ```
