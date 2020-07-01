@@ -56,7 +56,7 @@ rm -rf test0 test1 test2 test3 test4 test5 test6
 ## Exercise 03: Connect me!
 [#klist](../README.md#klist)
 ```bash
-klist -l > klist.txt
+klist -aV > klist.txt
 ```
 <br>
 
