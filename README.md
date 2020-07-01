@@ -1,8 +1,23 @@
 # 42seoul
 2기 1차: 이노베이션 아카데미 Piscine
 
+## TOC
+* Shell
+  * [괄호](#괄호)
+  * 파일크기지정(#
+  * cat
+  * cut
+  * chmod
+  * file
+  * find
+  * git
+  * hard_symbolic_link
+  * klist
+  * ls
+
+
 <details>
-<summary>Shell: 괄호, 파일크기지정, cat, chmod, file, find, git, hard_symbolic_link, klist, ls</summary>
+<summary>Shell</summary>
 
 ## 괄호
 * 코멘드라인에서는 괄호가 제대로 안먹힌다!
