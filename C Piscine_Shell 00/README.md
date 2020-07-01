@@ -67,7 +67,7 @@ vi midLS    # midLS 내용은 아래 참고
 ```
 ```bash
 # midLS 내용
-ls -p -m
+ls -pmUt
 ```
 <br>
 
