@@ -4,16 +4,18 @@
 ## TOC
 * Shell
   * [괄호](#괄호)
-  * 파일크기지정(#
-  * cat
-  * cut
-  * chmod
-  * file
-  * find
-  * git
-  * hard_symbolic_link
-  * klist
-  * ls
+  * [파일크기지정](#특정-크기로-지정하여-파일-만들기파일크기지정)
+  * [cat](#cat)
+  * [cut](#cut)
+  * [chmod](#chmod-change-mode)
+  * [file](#file)
+  * [find](#find)
+  * [git](#git)
+  * [groups](#groups)
+  * [hard_symbolic_link](#hard_symbolic_link)
+  * [klist](#klist)
+  * [ls](#ls)
+  * [tr](#tr)
 
 
 <details>
@@ -25,12 +27,13 @@
 * ```)``` 대신에 ```\)```
 
 ## 특정 크기로 지정하여 파일 만들기(파일크기지정)
-
 ```dd if=/dev/zero of=[file name] bs=[read size] count=[file size]```
 * ```/dev/zero```의 특수 장치에서 ```bs```만큼 지정된 사이즈 씩 읽어서 ```count```의 크기를 지닌 파일을 생성
 * ```dd if=/dev/zero of=test_file.img bs=4M count=256```: ```/dev/zero```에서 ```4M```씩 읽어서 ```256M```의 크기를 지닌 ```test_file.img``` 생성
 
 ## cat
+
+## cut
 
 ## chmod: CHange MODe
 * 대상 파일과 디렉토리의 사용권한을 변경할 때 사용
@@ -105,9 +108,6 @@
   ```
   41 string 42 42 file
   ```
-  
-
-
 
 ## find
 * 파일 및 디렉토리를 검사할 때 사용
@@ -147,6 +147,8 @@
    * ```-mtime```: 파일의 데이터 수정(modify) 시각을 기준으로 파일 검색
    
 ## git
+
+## groups
 
 ## Hard-Symbolic Link
 윈도우로 치면 "바로가기" 같은 개념이다. 리눅스에도 특정 파일이나 디렉터리에 링크 기능을 제공하는데, 제목에서 보다시피 두 가지가 있다.<br>두 개 모두 처리하는 역할은 같지만 개념은 다르다.
@@ -280,5 +282,7 @@
   * ```-u```: 최근 엑세스된 날짜를 순서대로 정렬
   * ```--version```: ls 명령어의 버전 조회
   * ```-m```: 파일 사이를 쉼표로 구분
+
+## tr
 
 </details>
