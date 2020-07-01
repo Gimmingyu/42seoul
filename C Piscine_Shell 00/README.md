@@ -96,7 +96,6 @@ git ls-files --others --exclude-standard --ignored
 <br>
 
 ## Exercise 07: diff
-[#cat](../README.md#cat)
 ```bash
 vi b      # b 내용은 아래 참고
 ```
