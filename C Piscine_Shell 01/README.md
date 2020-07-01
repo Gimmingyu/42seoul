@@ -3,6 +3,7 @@
 <br>
 
 ## Exercise 01: print_groups
+[#groups](../README.md#groups), [#tr](../README.md#tr), [#cat](../README.md#cat), [#cut](../README.md#cut), [#chmod](../README.md#chmod)
 ```bash
 mkdir ex01
 cd ex01
@@ -14,3 +15,6 @@ chmod 777 print_groups.sh
 # print_groups.sh 내용
 groups $FT_USER | tr " " "," | cat -e | cut -d "$" -f 1
 ```
+<br>
+
+## Exercise 02:
