@@ -99,21 +99,7 @@ git ls-files . --exclude-standard --ignored
 ## Exercise 07: diff
 [#cat](../README.md#cat)
 ```bash
-vi a      # a 내용은 아래 참고
 vi b      # b 내용은 아래 참고
-diff a b > sw.diff
-rm a b
-```
-```bash 
-# a 내용
-STARWARS
-Episode IV, A NEW HOPE It is a period of civil war.
-
-Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.
-During the battle, Rebel spies managed to steal secret plans to the Empire's ultimate weapon, the DEATH STAR,
-an armored space station with enough power to destroy an entire planet.
-
-Pursued by the Empire's sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy...
 ```
 ```bash
 # b 내용
@@ -131,7 +117,7 @@ Princess Mehdi races home aboard her starship, custodian of the stolen plans tha
 <br>
 
 ## Exercise 08: clean
-[#find](../README.md#find)
+[#find](../README.md#find), [#괄호](../README.md#괄호)
 ```bash
 mkdir ex08
 cd ex08
