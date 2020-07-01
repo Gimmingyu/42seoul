@@ -79,7 +79,6 @@ vi git_comment  # git_comment 내용은 아래 참고
 ```bash
 # git_comment 내용
 git log -n 5 --pretty=format:"%H"
-echo ""
 ```
 <br>
 
@@ -90,7 +89,7 @@ vi gitignore    # gitignore 내용은 아래 참고
 ```
 ```bash
 # gitignore 내용
-git ls-files . --exclude-standard --ignored
+git ls-files --others --exclude-standard --ignored
 ```
 
 
