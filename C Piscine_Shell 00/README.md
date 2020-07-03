@@ -78,7 +78,7 @@ vi git_comment  # git_comment 내용은 아래 참고
 ```
 ```bash
 # git_comment 내용
-git log -n 5 --pretty=format:"%H"
+git log --pretty=format:"%H" | head -n 5
 ```
 <br>
 
@@ -123,7 +123,7 @@ vi clean    # clean 내용은 아래 참고
 ```
 ```bash
 # clean 내용
-find . \( -type f -name "*~" -o -name "#*" \) -print -delete
+find -type f \( -name "*~" -o -name "#*#" \) -print -delete
 ```
 <br>
 
