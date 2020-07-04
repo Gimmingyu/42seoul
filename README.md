@@ -5,6 +5,7 @@
 * Compile
   * [gcc](#gcc)
   * [norminette](#norminette)
+  * [42 header](#42-header)
 * Mac
   * [단축키](#단축키)
 * Shell
@@ -30,7 +31,7 @@
 ## gcc
 ```bash
 gcc -Wall -Wextra -Werror main.c [c파일1] [c파일2] [c파일3] ...
-Norme: ./main.c     # 이렇게만 나오면 성공
+./a.out    # o라고 나오면 통과
 ```
 
 ## norminette
@@ -43,6 +44,10 @@ Norme: ./[c파일1]
 Norme: ./[c파일2]
 Norme: ./[c파일3]
 ```
+
+## 42 header
+* 파일을 vim으로 생성하고
+* ```:Stdheader```
 
 
 </details>
