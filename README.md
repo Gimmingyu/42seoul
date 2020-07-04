@@ -26,16 +26,36 @@
 <details>
 <summary>Compile</summary>
  
+42에서 c언어 코드를 돌리기 위해서는 ```gcc```, ```norminette``` 둘 다 돌아가야 한다.
 ## gcc
+```bash
+gcc -Wall -Wextra -Werror main.c [c파일1] [c파일2] [c파일3] ...
+Norme: ./main.c     # 이렇게만 나오면 성공
+```
+
 ## norminette
+```bash
+norminette -R CheckForbiddenSourceHeader main.c [c파일1] [c파일2] [c파일3] ...
+
+# 입력 파일들 모두 별 다른 에러 없이 출력되면 성공
+Norme: ./main.c
+Norme: ./[c파일1]
+Norme: ./[c파일2]
+Norme: ./[c파일3]
+```
+
+
 </details>
 
 <details>
 <summary>Mac</summary>
 
-|동작|단축키|
-|:--:|:--:|
-|||
+|동작|세부동작|단축키|
+|:--:|:--:|:--:|
+|캡쳐|전체|Command + Shift + Control + 3|
+||선택영역|Command + Shift + 4|
+||선택창|Command + Shift + 4, 캡처할 창에 커서를 올리고 Space, 클릭|
+
 </details>
 
 <details>
