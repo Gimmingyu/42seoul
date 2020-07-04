@@ -6,8 +6,6 @@
   * [gcc](#gcc)
   * [norminette](#norminette)
   * [42 header](#42-header)
-* Mac
-  * [단축키](#단축키)
 * Shell
   * [괄호](#괄호)
   * [파일크기지정](#특정-크기로-지정하여-파일-만들기파일크기지정)
@@ -22,7 +20,9 @@
   * [klist](#klist)
   * [ls](#ls)
   * [tr](#tr)
-* [Vim](#vim)
+* Etc
+  * [Mac](#mac)
+  * [Vim](#vim) 
 
 <details>
 <summary>Compile</summary>
@@ -49,17 +49,6 @@ Norme: ./[c파일3]
 * 파일을 vim으로 생성하고
 * ```:Stdheader```
 
-
-</details>
-
-<details>
-<summary>Mac</summary>
-
-|동작|세부동작|단축키|
-|:--:|:--:|:--:|
-|캡쳐|전체|Command + Shift + Control + 3|
-||선택영역|Command + Shift + 4|
-||선택창|Command + Shift + 4, 캡처할 창에 커서를 올리고 Space, 클릭|
 
 </details>
 
@@ -351,10 +340,17 @@ Norme: ./[c파일3]
 
 </details>
 
-
 <details>
-<summary>Vim</summary>
- 
+<summary>Etc</summary>
+
+## Mac
+|동작|세부동작|단축키|
+|:--:|:--:|:--:|
+|캡쳐|전체|Command + Shift + Control + 3|
+||선택영역|Command + Shift + 4|
+||선택창|Command + Shift + 4, 캡처할 창에 커서를 올리고 Space, 클릭|
+
+## Vim
 |동작|단축키|
 |:--:|:--:|
 |줄 지우기|명렁, DD|
