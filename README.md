@@ -2,6 +2,11 @@
 2기 1차: 이노베이션 아카데미 Piscine
 
 ## TOC
+* Compile
+  * [gcc](#gcc)
+  * [norminette](#norminette)
+* Mac
+  * [단축키](#단축키)
 * Shell
   * [괄호](#괄호)
   * [파일크기지정](#특정-크기로-지정하여-파일-만들기파일크기지정)
@@ -16,7 +21,22 @@
   * [klist](#klist)
   * [ls](#ls)
   * [tr](#tr)
+* [Vim](#vim)
 
+<details>
+<summary>Compile</summary>
+ 
+## gcc
+## norminette
+</details>
+
+<details>
+<summary>Mac</summary>
+
+|동작|단축키|
+|:--:|:--:|
+|||
+</details>
 
 <details>
 <summary>Shell</summary>
@@ -304,4 +324,13 @@
 
 ## tr
 
+</details>
+
+
+<details>
+<summary>Vim</summary>
+ 
+|동작|단축키|
+|:--:|:--:|
+|줄 지우기|명렁, DD|
 </details>
