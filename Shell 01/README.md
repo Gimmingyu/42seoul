@@ -18,3 +18,27 @@ groups $FT_USER | tr " " "," | cat -e | cut -d "$" -f 1
 <br>
 
 ## Exercise 02:
+```bash
+```
+
+### Exercise 03:
+```bash
+```
+
+### Exercise 04:
+```bash
+```
+
+### Exercise 05:
+```bash
+echo -n 42 > test
+mv test '"\?$*’MaRViN’*$?\"'
+```
+
+### Exercise 06:
+```bash
+```
+
+### Exercise 07:
+```bash
+```
