@@ -2,10 +2,12 @@
 2기 1차: 이노베이션 아카데미 Piscine
 
 ## TOC
-* Compile
-  * [gcc](#gcc)
-  * [norminette](#norminette)
-  * [42 header](#42-header)
+* C language
+  * Compile(#compile)
+    * [gcc](#gcc)
+    * [norminette](#norminette)
+    * [42 header](#42-header)
+  * Coding Rule(#coding-rule)
 * Shell
   * [괄호](#괄호)
   * [파일크기지정](#특정-크기로-지정하여-파일-만들기파일크기지정)
@@ -28,16 +30,18 @@
 <br><br>
 
 <details>
-<summary>Compile</summary>
+<summary>C language</summary>
  
-42에서 c언어 코드를 돌리기 위해서는 ```gcc```, ```norminette``` 둘 다 돌아가야 한다.
-## gcc
+## Complie 
+* 42에서는 **Moulinette**라는 프로그램으로 과제물을 확인하고 평가한다
+* 42에서 c언어 코드를 돌리기 위해서는 ```gcc```, ```norminette``` 둘 다 오류없이 통과해야 한다.
+#### 1. gcc: Moulinette는 ```gcc```로 c언어를 컴파일함
 ```bash
 gcc -Wall -Wextra -Werror main.c [c파일1] [c파일2] [c파일3] ...
-./a.out    # o라고 나오면 통과
+./a.out    # 원하는 결과가 나오면 통과
 ```
 
-## norminette
+#### 2. norminette: **Moulinette**가 사용하는 플래그인 ```-R CheckForbiddenSourceHeader```를 사용할 수 있음 
 ```bash
 norminette -R CheckForbiddenSourceHeader main.c [c파일1] [c파일2] [c파일3] ...
 
@@ -48,10 +52,27 @@ Norme: ./[c파일2]
 Norme: ./[c파일3]
 ```
 
-## 42 header
-* 파일을 vim으로 생성하고
-* ```:Stdheader```
+#### 3. 42 header: 파일 생성 시 꼭 만들어야 하는 header
+* 파일을 vim으로 생성하고 ```:Stdheader``` 입력
+* 만들면 자신의 정보가 담긴 주석이 만들어진다. 업데이트 시간은 알아서 수정되니 만들기만 하고 신경은 쓰지 않아도 된다
+  ```
+  /* ************************************************************************** */
+  /*                                                                            */
+  /*                                                        :::      ::::::::   */
+  /*   ft_putchar.c                                       :+:      :+:    :+:   */
+  /*                                                    +:+ +:+         +:+     */
+  /*   By: kyekim <kyekim@student.42.fr>              +#+  +:+       +#+        */
+  /*                                                +#+#+#+#+#+   +#+           */
+  /*   Created: 2020/07/06 09:37:29 by kyekim            #+#    #+#             */
+  /*   Updated: 2020/07/06 11:30:35 by kyekim           ###   ########.fr       */
+  /*                                                                            */
+  /* ************************************************************************** */
 
+  ```
+
+## Coding Rule
+* 사용 금지 함수를 사용하면 부정 행위로 간주됨. -42점이 부여되며, 받은 점수는 절대로 수정 불가능
+* 꼭! 반드시 지키도록 하자!!
 
 </details>
 
