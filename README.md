@@ -4,9 +4,9 @@
 ## TOC
 * C language
   * Compile(#compile)
-    * [gcc](#gcc)
-    * [norminette](#norminette)
-    * [42 header](#42-header)
+    * [gcc]
+    * [norminette]
+    * [42 header]
   * Coding Rule(#coding-rule)
 * Shell
   * [괄호](#괄호)
@@ -32,7 +32,7 @@
 <details>
 <summary>C language</summary>
  
-## Complie 
+## Compile 
 * 42에서는 **Moulinette**라는 프로그램으로 과제물을 확인하고 평가한다
 * 42에서 c언어 코드를 돌리기 위해서는 ```gcc```, ```norminette``` 둘 다 오류없이 통과해야 한다.
 #### 1. gcc: Moulinette는 ```gcc```로 c언어를 컴파일함
