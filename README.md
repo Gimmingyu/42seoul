@@ -3,11 +3,8 @@
 
 ## TOC
 * C language
-  * Compile(#compile)
-    * [gcc]
-    * [norminette]
-    * [42 header]
-  * Coding Rule(#coding-rule)
+  * [Compile](#compile): gcc, norminette, 42 header
+  * [Coding Rule](#coding-rule)
 * Shell
   * [괄호](#괄호)
   * [파일크기지정](#특정-크기로-지정하여-파일-만들기파일크기지정)
