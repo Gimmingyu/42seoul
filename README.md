@@ -15,7 +15,7 @@
   * [find](#find)
   * [git](#git)
   * [groups](#groups)
-  * [hard_symbolic_link](#hard_symbolic_link)
+  * [hard-symbolic link](#hard-symbolic-link)
   * [klist](#klist)
   * [ls](#ls)
   * [tar](#tar)
@@ -70,6 +70,8 @@ Norme: ./[c파일3]
 ## Coding Rule
 * 사용 금지 함수를 사용하면 부정 행위로 간주됨. -42점이 부여되며, 받은 점수는 절대로 수정 불가능
 * 꼭! 반드시 지키도록 하자!!
+* **Intra의 돋보기 섹션 >  42 학업 관련 자료 / Norm && Norminette** 에서도 확인이 가능함
+1. 모든 파일은 42헤더로 시작: [#42header](#42 header)참고
 
 </details>
 
