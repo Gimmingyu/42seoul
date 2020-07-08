@@ -6,20 +6,24 @@
 /*   By: kyekim <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 20:31:21 by kyekim            #+#    #+#             */
-/*   Updated: 2020/07/08 20:37:54 by kyekim           ###   ########.fr       */
+/*   Updated: 2020/07/08 21:04:07 by kyekim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int i;
+	unsigned int i;
 
 	i = 0;
-	while(src[i] != '\0' && i < n)
+	while (src[i] != '\0' && i < n)
 	{
 		dest[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
 	return (dest);
 }
