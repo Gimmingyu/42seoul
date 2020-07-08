@@ -5,8 +5,8 @@
 * C language
   * [Compile](#compile)
     * [gcc](#1-gcc-moulinette는-gcc로-c언어를-컴파일함)
-    * [norminette](2-norminette-moulinette가-사용하는-플래그인--r-checkforbiddensourceheader를-사용할-수-있음)
-    * [42 header](3-42-header-파일-생성-시-꼭-만들어야-하는-header)
+    * [norminette](#2-norminette-moulinette가-사용하는-플래그인--r-checkforbiddensourceheader를-사용할-수-있음)
+    * [42 header](#3-42-header-파일-생성-시-꼭-만들어야-하는-header)
   * [Coding Rule](#coding-rule)
 * Shell
   * [괄호](#괄호)
