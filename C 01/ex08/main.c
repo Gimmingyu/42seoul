@@ -6,21 +6,12 @@
 /*   By: kyekim <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 19:28:16 by kyekim            #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2020/07/08 20:46:39 by kyekim           ###   ########.fr       */
-=======
-/*   Updated: 2020/07/08 19:50:16 by kyekim           ###   ########.fr       */
->>>>>>> b64d4c0c0dfc6c86a125c4eb64f60e6cf96e4df9
+/*   Updated: 2020/07/08 20:57:39 by kyekim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-<<<<<<< HEAD
-=======
-/* 수정필요 */
-
->>>>>>> b64d4c0c0dfc6c86a125c4eb64f60e6cf96e4df9
 void	ft_sort_int_tab(int *tab, int size);
 
 int		main(void)
