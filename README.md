@@ -3,7 +3,10 @@
 
 ## TOC
 * C language
-  * [Compile](#compile): gcc, norminette, 42 header
+  * [Compile](#compile)
+    * [gcc](#1-gcc-moulinette는-gcc로-c언어를-컴파일함)
+    * [norminette](2-norminette-moulinette가-사용하는-플래그인--r-checkforbiddensourceheader를-사용할-수-있음)
+    * [42 header](3-42-header-파일-생성-시-꼭-만들어야-하는-header)
   * [Coding Rule](#coding-rule)
 * Shell
   * [괄호](#괄호)
@@ -71,7 +74,21 @@ Norme: ./[c파일3]
 * 사용 금지 함수를 사용하면 부정 행위로 간주됨. -42점이 부여되며, 받은 점수는 절대로 수정 불가능
 * 꼭! 반드시 지키도록 하자!!
 * **Intra의 돋보기 섹션 >  42 학업 관련 자료 / Norm && Norminette** 에서도 확인이 가능함
-1. 모든 파일은 42헤더로 시작: [#42header](#42 header)참고
+1. 모든 파일은 42헤더로 시작: [#42header](#3-42-header-파일-생성-시-꼭-만들어야-하는-header)참고
+2. 들여쓰기는 공백 네 칸 크기의 탭으로 이루어져야 함. 띄어쓰기가 아닌 진짜 탭으로 구성
+   * ```#include <unistd.h>```:
+   * ```void    함수명(변수)```: 탭 한 번 
+   * ```int     main(void)```: 탭 두 번. int형같이 4글자보다 부족한 경우에는 한번 더 해야하는 듯
+3. 모든 함수는 함수 자체의 중괄호를 제외하고 25줄 이하
+   * 중괄호가 있는 줄은 중괄호만 존재해야 함
+     ```
+     int     main(void)
+     {
+         ft_putchar('h');
+         return (0);
+     }
+     ```
+   
 
 </details>
 
