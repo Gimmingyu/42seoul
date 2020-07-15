@@ -1,6 +1,6 @@
 # 42seoul
-2기 1차: 이노베이션 아카데미 Piscine <br>
 [![See & Run on Repl.it](https://repl.it/badge/github/kimkyeongnam/42seoul)](https://repl.it/github/kimkyeongnam/42seoul)
+<br>2기 1차: 이노베이션 아카데미 Piscine
 
 ## TOC
 * C language
