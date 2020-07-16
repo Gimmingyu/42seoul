@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyekim <kyekim@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sumoon <sumoon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/16 01:16:49 by kyekim            #+#    #+#             */
-/*   Updated: 2020/07/16 01:49:26 by kyekim           ###   ########.fr       */
+/*   Created: 2020/07/15 15:12:19 by sumoon            #+#    #+#             */
+/*   Updated: 2020/07/15 19:15:57 by sumoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include <unistd.h>
 
-int	ft_strlen(char *str);
-
-int	main(void)
+int		main(int argc, char **argv)
 {
-	char str[] = "123abc";
-	printf("%d, %lu\n", ft_strlen(str), strlen(str));
+	int index;
+
+	index = argc - 1;
+	while (index > 0)
+	{
+		while (*argv[index])
+			write(1, argv[index]++, 1);
+		write(1, "\n", 1);
+		index--;
+	}
 	return (0);
 }
