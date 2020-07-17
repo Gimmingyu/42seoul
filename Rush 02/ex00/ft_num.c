@@ -37,20 +37,20 @@ int		ft_power_ten(int power)
 	return (res);
 }
 
-int		*ft_origin_num_arr(char *str)
+int		*ft_origin_num_arr(char *str, int len)
 {
 	int 	*ar;
 	int 	i;
-	int 	len;
-
+	
 	i = 0;
-	len = ft_strlen(str) - 1;
 	// char_ar = (char *)malloc((len + 1) * sizeof(char));
-	ar = (int *)malloc((len + 1) * sizeof(int));
+	ar = (int *)malloc((len) * sizeof(int));
 	while (str[i])
 	{
 		ar[i] = str[i] - '0';
-		ar[i] *= ft_power_ten(len--);
+		ar[i] *= ft_power_ten(--len);
+		write(1, &ar[i], 1);
+		write(1, "\n", 1);
 		i++;
 	}
 	return (ar);

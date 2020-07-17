@@ -26,6 +26,6 @@ void	ft_putstr(char *str);
 */
 int		ft_atoi(char *str);
 int		ft_power_ten(int power);
-int		*ft_origin_num_arr(char *str);
+int		*ft_origin_num_arr(char *str, int len);
 
 #endif

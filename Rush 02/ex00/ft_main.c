@@ -4,9 +4,11 @@ void	tmp(char *str)
 {
 	int *ar;
 	int i;
+	int len;
 
 	i = 0;
-	ar = ft_origin_num_arr(str);
+	len = ft_strlen(str);
+	ar = ft_origin_num_arr(str, len);
 	while (i < 2)
 	{
 		write(1, &ar[i], 1);
