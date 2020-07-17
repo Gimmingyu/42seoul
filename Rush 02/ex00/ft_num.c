@@ -39,20 +39,19 @@ int		ft_power_ten(int power)
 
 int		*ft_origin_num_arr(char *str)
 {
-	char	*char_ar;
-	int 	*int_ar;
+	int 	*ar;
 	int 	i;
 	int 	len;
 
 	i = 0;
 	len = ft_strlen(str) - 1;
 	// char_ar = (char *)malloc((len + 1) * sizeof(char));
-	int_ar = (int *)malloc((len + 1) * sizeof(int));
+	ar = (int *)malloc((len + 1) * sizeof(int));
 	while (str[i])
 	{
-		int_ar[i] = str[i] - '0';
-		int_ar[i] *= ft_power_ten(len--);
+		ar[i] = str[i] - '0';
+		ar[i] *= ft_power_ten(len--);
 		i++;
 	}
-	return (int_ar);
+	return (ar);
 }
