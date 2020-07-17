@@ -9,11 +9,6 @@ void	tmp(char *str)
 	i = 0;
 	len = ft_strlen(str);
 	ar = ft_origin_num_arr(str, len);
-	while (i < 2)
-	{
-		write(1, &ar[i], 1);
-		write(1, "\n", 1);
-	}
 }
 
 int		main(int argc, char *argv[])
@@ -24,7 +19,6 @@ int		main(int argc, char *argv[])
 	
 	if (argc == 2)
 	{
-		ft_putstr(argv[1]);
 		tmp(argv[1]);
 	}
 	//else if (argc == 3)

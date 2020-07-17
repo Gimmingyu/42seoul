@@ -49,8 +49,8 @@ int		*ft_origin_num_arr(char *str, int len)
 	{
 		ar[i] = str[i] - '0';
 		ar[i] *= ft_power_ten(--len);
-		write(1, &ar[i], 1);
-		write(1, "\n", 1);
+		printf("%d\n", ar[i]);
+		break;
 		i++;
 	}
 	return (ar);
