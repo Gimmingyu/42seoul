@@ -8,7 +8,10 @@ void	tmp(char *str)
 	i = 0;
 	ar = ft_origin_num_arr(str);
 	while (i < 2)
+	{
 		write(1, &ar[i], 1);
+		write(1, "\n", 1);
+	}
 }
 
 int		main(int argc, char *argv[])
