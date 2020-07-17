@@ -5,7 +5,7 @@
 */
 int		ft_strlen(char *str)
 {
-	int i;
+	int 	i;
 
 	i = 0;
 	while (str[i])
@@ -24,4 +24,16 @@ int		ft_strcmp(char *str1, char *str2)
 		str2++;
 	}
 	return (*(unsigned char*)str1 - *(unsigned char*)str2);
+}
+
+/*
+** [ft_putstr] print string value
+*/
+void	ft_putstr(char *str)
+{
+	int		i;
+
+	i = 0;
+	while (str[i] != '\0')
+		write(1, &str[i++], 1);
 }

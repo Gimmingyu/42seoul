@@ -7,7 +7,7 @@ NAME = rush-02
 all: $(NAME)
 
 $(NAME) : 
-		$(CC) $(CFLAGS) *.c -o $(NAME) -I
+		$(CC) $(CFLAGS) *.c -o $(NAME)
 
 clean :
 		rm -rf *.o
