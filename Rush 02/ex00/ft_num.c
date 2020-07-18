@@ -32,7 +32,7 @@ int		ft_power_ten(int power)
 	res = 10;
 	if (power == 0)
 		return (1);
-	while (i < power)
+	while (i++ < power)
 		res *= 10;
 	return (res);
 }
