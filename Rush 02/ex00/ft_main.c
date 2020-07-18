@@ -3,12 +3,13 @@
 void	tmp(char *str)
 {
 	int *ar;
-	int i;
 	int len;
 
-	i = 0;
 	len = ft_strlen(str);
 	ar = ft_origin_num_arr(str, len);
+	
+	while (--len >= 0)
+		printf("\n%d", ar[len]);
 }
 
 int		main(int argc, char *argv[])
@@ -19,6 +20,8 @@ int		main(int argc, char *argv[])
 	
 	if (argc == 2)
 	{
+		//tmp(argv[1]);
+		ft_read_txt("numbers.dict");
 		tmp(argv[1]);
 	}
 	//else if (argc == 3)

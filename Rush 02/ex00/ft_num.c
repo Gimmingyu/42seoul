@@ -43,14 +43,11 @@ int		*ft_origin_num_arr(char *str, int len)
 	int 	i;
 	
 	i = 0;
-	// char_ar = (char *)malloc((len + 1) * sizeof(char));
 	ar = (int *)malloc((len) * sizeof(int));
 	while (str[i])
 	{
 		ar[i] = str[i] - '0';
 		ar[i] *= ft_power_ten(--len);
-		printf("%d\n", ar[i]);
-		break;
 		i++;
 	}
 	return (ar);
