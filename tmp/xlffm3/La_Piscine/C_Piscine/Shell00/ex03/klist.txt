@@ -1,0 +1,5 @@
+Credentials cache: API:0FE2DFAC-CB1C-4557-867C-3CD317F281D5
+        Principal: jipark@42SEOUL.KR
+
+  Issued                Expires             Flags    Principal
+Jan 20 13:10:36 2020  Jan 20 23:10:36 2020  FPRIA  krbtgt/42SEOUL.KR@42SEOUL.KR
