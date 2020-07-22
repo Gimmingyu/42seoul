@@ -1,18 +1,34 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kyekim <kyekim@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/19 11:52:27 by kyekim            #+#    #+#             */
+/*   Updated: 2020/07/19 14:11:24 by kyekim           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 
 int		*ft_range(int min, int max)
 {
-	int i;
-	int *res;
+	unsigned long long		length;
+	unsigned long long		count;
+	int						*arr;
 
+	arr = 0;
 	if (min >= max)
-		return (0);
-	res = (int *)malloc(sizeof(int) * (max - min));
-	i = 0;
-	while (min + i < max)
+		return (arr);
+	length = max - min;
+	arr = malloc(sizeof(int) * length);
+	count = 0;
+	while (count < length)
 	{
-		res[i] = min + 1;
-		i++;
+		arr[count] = min;
+		min++;
+		count++;
 	}
-	return (res);
+	return (arr);
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kyekim <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 20:31:21 by kyekim            #+#    #+#             */
-/*   Updated: 2020/07/08 21:04:07 by kyekim           ###   ########.fr       */
+/*   Created: 2020/07/13 12:10:29 by kyekim            #+#    #+#             */
+/*   Updated: 2020/07/14 00:37:18 by kyekim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	unsigned int i;
 
 	i = 0;
-	while (src[i] != '\0' && i < n)
+	while (i < n && src[i] != '\0')
 	{
 		dest[i] = src[i];
 		i++;

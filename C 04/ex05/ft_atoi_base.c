@@ -1,95 +1,94 @@
-int	is_valid(char *base)
-{
-	int i;
-	int j;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kyekim <kyekim@student.42seoul.fr>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/17 19:30:48 by kyekim            #+#    #+#             */
+/*   Updated: 2020/07/19 13:57:34 by kyekim           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-	if (base[0] == '\0' || base[1] == '\0')
-		return (0);
-	i = 0;
-	while (base[i] != '\0')
+unsigned int	get_condition(char *base)
+{
+	unsigned int len;
+	unsigned int i;
+	unsigned int j;
+
+	len = 0;
+	while (base[len])
 	{
-		if (base[i] == '+' || base[i] == '-'
-				|| base[i] == '\n' || base[i] == '\v'
-				|| base[i] == '\t' || base[i] == '\f'
-				|| base[i] == '\r' || base[i] == ' ')
+		if (base[len] == '+' || base[len] == '-')
 			return (0);
-		j = i + 1;
-		while (base[j] != '\0')
-		{
+		if (base[len] == ' ' || (base[len] >= 8 && base[len] <= 13))
+			return (0);
+		len++;
+	}
+	if (len <= 1)
+		return (0);
+	i = 0 - 1;
+	while (++i < len - 1)
+	{
+		j = i + 1 - 1;
+		while (++j < len)
 			if (base[i] == base[j])
 				return (0);
-			j++;
-		}
-		i++;
 	}
-	return (1);
+	return (len);
 }
 
-int	check_char(char c, char *base)
+int				is_in_base(char *base, char c, unsigned int *sum)
 {
-	int i;
+	unsigned int i;
 
-	if (c == '\t' || c == '\n'
-			|| c == '\v' || c == '\f'
-			|| c == '\r' || c == ' ')
-		return (1);
-	if (c == '-')
-		return (-1);
-	if (c == '+')
-		return (-2);
 	i = 0;
-	while (base[i] != '\0')
+	while (base[i])
 	{
-		if (c == base[i++])
-			return (2);
+		if (base[i] == c)
+		{
+			*sum = i;
+			return (1);
+		}
+		i++;
 	}
 	return (0);
 }
 
-int	get_int(char c, char *base)
+int				get_number(char *str, char *base, unsigned int len)
 {
-	int i;
+	unsigned int	i;
+	unsigned int	sum;
+	int				flag;
+	int				result;
 
 	i = 0;
-	while (base[i] != c)
+	flag = 1;
+	result = 0;
+	while (str[i] == 32 || (str[i] >= 8 && str[i] <= 13))
 		i++;
-	return (i);
-}
-
-int	get_length(char *base)
-{
-	int i;
-
-	i = 0;
-	while (base[i] != '\0')
-		i++;
-	return (i);
-}
-
-int	ft_atoi_base(char *str, char *base)
-{
-	int index;
-	int count;
-	int result;
-	int length;
-
-	if (!is_valid(base))
-		return (0);
-	index = 0;
-	while (check_char(str[index], base) == 1)
-		index++;
-	count = 0;
-	while (check_char(str[index], base) < 0)
+	while (str[i] == '-' || str[i] == '+')
 	{
-		if (check_char(str[index], base) == -1)
-			count++;
-		index++;
+		if (str[i] == '-')
+			flag *= -1;
+		i++;
 	}
-	if (check_char(str[index], base) != 2)
+	while (is_in_base(base, str[i], &sum))
+	{
+		result = result * len + sum;
+		i++;
+	}
+	return (result * flag);
+}
+
+int				ft_atoi_base(char *str, char *base)
+{
+	unsigned int	len;
+	int				result;
+
+	len = get_condition(base);
+	if (!len)
 		return (0);
-	result = get_int(str[index++], base);
-	length = get_length(base);
-	while (check_char(str[index], base) == 2)
-		result = result * length + get_int(str[index++], base);
-	return (count % 2 == 1 ? result * (-1) : result);
+	result = get_number(str, base, len);
+	return (result);
 }

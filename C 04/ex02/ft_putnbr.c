@@ -6,37 +6,35 @@
 /*   By: kyekim <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 20:45:31 by kyekim            #+#    #+#             */
-/*   Updated: 2020/07/16 02:05:43 by kyekim           ###   ########.fr       */
+/*   Updated: 2020/07/16 02:26:38 by kyekim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char ch)
+void	rev_putnbr(int n)
 {
-	write(1, &ch, 1);
-}
+	char temp;
 
-void	recursive(int n)
-{
-	if (n > 9)
-	{
-		recursive(n / 10);
-		recursive(n % 10);
-	}
-	else
-		ft_putchar(n + '0');
+	temp = n % 10 + '0';
+	if (n >= 10)
+		rev_putnbr(n / 10);
+	write(1, &temp, 1);
 }
 
 void	ft_putnbr(int nb)
 {
-	unsigned int num;
+	char temp;
 
-	num = (unsigned int)nb;
-	if (num < 0)
+	if (nb < 0)
 	{
-		ft_putchar('-');
-		num *= -1;
+		write(1, "-", 1);
+		temp = nb % 10 * (-1) + '0';
+		nb /= -10;
+		if (nb > 10)
+			rev_putnbr(nb);
+		write(1, &temp, 1);
 	}
-	recursive(num);
+	else
+		rev_putnbr(nb);
 }

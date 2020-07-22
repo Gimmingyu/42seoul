@@ -1,0 +1,37 @@
+int ft_dfs(itn idx, int *udlr[], int *ans)
+재귀함수
+idx; 답배열의 인덱스, 입력으로 들어온 행,열 저장 배열, 답배열 주소값
+return: 1-> 해당 값이 들어갔을 때 답 가능
+		0 -> 해당 값이 들어갔을 때 불가능
+=> 옳은 자리인지 확인하는 함수는 ft_check. 아래 참고
+
+
+int	ft_check(int idx, int *udlr[], int *ans)
+상자 개수가 맞는지 확인하는 함수
+return: 1 -> True
+		0 -> False
+맞는지 확인하는 함수는 크게 두 가지로 이루어져 있음
+
+
+1) int ft_check_1234(int idx, int *ans)
+중복 체크 함수. 값이 1 2 3 4 중복없이 있어야 함
+return: 1 -> True
+		0 -> False
+
+2) int ft_check_udlr(int idx, int *udlr[], int *ans)
+Up Down Left Right 조건 맞는지 확인.
+return: 1 -> True
+		0 -> False
+이 함수는 또한 4 가지 기능을 합쳐져 만들어짐
+(1) ind u_check(idx, uldr, ans)
+	위쪽 조건 맞는지 확인
+	idx가 12, 13,14, 15일 때 확인
+(2) int d_check(idx, udlr, ans)
+	아래 조건 확인 함수
+	idx가 12, 13, 14, 15일 때 확인
+(3) int l_check(idx, udlr, ans)
+	왼쪽 조건 확인 함수
+	idx가 3, 7, 11, 15일 때 확인
+(4) int	r_check(idx, udlr, ans)
+	오른쪽 조건 확인 함수
+	idx가 3, 7, 11, 15일 때 확인

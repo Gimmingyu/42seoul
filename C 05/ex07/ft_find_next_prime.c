@@ -1,23 +1,53 @@
-int		is_prime(int n)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kyekim <kyekim@student.42seoul.kr>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/18 16:09:21 by kyekim            #+#    #+#             */
+/*   Updated: 2020/07/19 14:04:49 by kyekim           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	get_sqrt_seven(int nb)
+{
+	int sqrt;
+
+	sqrt = 0;
+	while (1)
+	{
+		sqrt++;
+		if (sqrt * sqrt >= nb || sqrt * sqrt < 0)
+			break ;
+	}
+	return (sqrt);
+}
+
+int	is_prime(int nb)
 {
 	int i;
-	int temp;
+	int sqrt;
 
-	if (n < 2)
+	if (nb < 2)
 		return (0);
-	i = 2;
-	while (i <= n / 2 && i <= 65536)
-	{
-		if (n % i == 0)
+	i = 2 - 1;
+	sqrt = get_sqrt_seven(nb);
+	while (++i <= sqrt && i != nb)
+		if (!(nb % i))
 			return (0);
-		i++;
-	}
 	return (1);
 }
 
-int		ft_find_next_prime(int nb)
+int	ft_find_next_prime(int nb)
 {
-	while (is_prime(nb) == 0)
-		nb++;
-	return (nb);
+	int prime;
+
+	prime = nb;
+	while (!is_prime(prime))
+		prime++;
+	if (is_prime(prime))
+		return (prime);
+	else
+		return (0);
 }

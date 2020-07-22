@@ -5,20 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kyekim <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 20:21:33 by kyekim            #+#    #+#             */
-/*   Updated: 2020/07/08 20:30:17 by kyekim           ###   ########.fr       */
+/*   Created: 2020/07/13 12:10:07 by kyekim            #+#    #+#             */
+/*   Updated: 2020/07/13 12:10:16 by kyekim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcpy(char *dest, char *src)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (*src != '\0')
 	{
-		dest[i] = src[i];
+		dest[i] = *src;
 		i++;
+		src++;
 	}
 	dest[i] = '\0';
 	return (dest);

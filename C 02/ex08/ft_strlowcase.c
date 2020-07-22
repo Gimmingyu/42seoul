@@ -5,20 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kyekim <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 22:11:44 by kyekim            #+#    #+#             */
-/*   Updated: 2020/07/08 22:12:13 by kyekim           ###   ########.fr       */
+/*   Created: 2020/07/13 12:12:12 by kyekim            #+#    #+#             */
+/*   Updated: 2020/07/13 12:12:14 by kyekim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strlowcase(char *str)
 {
-	while (*str != '\0')
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
 	{
-		if (*str >= 'A' && *str <= 'Z')
+		if (str[i] >= 65 && str[i] <= 90)
 		{
-			*str = *str + ('a' - 'A');
+			str[i] += 32;
 		}
-		str++;
+		i++;
 	}
 	return (str);
 }

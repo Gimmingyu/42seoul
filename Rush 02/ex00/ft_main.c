@@ -1,31 +1,42 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_main.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kyekim <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/18 12:09:49 by kyekim            #+#    #+#             */
+/*   Updated: 2020/07/19 18:59:45 by jopark           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_h.h"
 
 void	tmp(char *str)
 {
-	int *ar;
 	int len;
 
 	len = ft_strlen(str);
-	ar = ft_origin_num_arr(str, len);
-	
-	while (--len >= 0)
-		printf("\n%d", ar[len]);
+	ft_grouping_num_three(str, len);	
 }
 
 int		main(int argc, char *argv[])
 {
-	// char *origin_dict;
-	
-	// origin_dict = "numbers.dict";
-	
+	if (ft_check_int(argv[1]))
+	{
+		write(1, "Error\n", 6);
+		return (0);
+	}
 	if (argc == 2)
 	{
-		//tmp(argv[1]);
-		ft_read_txt("numbers.dict");
+		if (ft_read_txt("numbers.dict"))
+			return (0);
 		tmp(argv[1]);
 	}
-	//else if (argc == 3)
-		//find_new_dict(argv[2])
-
+	else if (argc == 3)
+	{
+		if (ft_read_txt(argv[1]))
+			return (0);
+	}
 	return (0);
 }

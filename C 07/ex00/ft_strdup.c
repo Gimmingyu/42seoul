@@ -1,19 +1,43 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kyekim <kyekim@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/19 11:39:00 by kyekim            #+#    #+#             */
+/*   Updated: 2020/07/19 14:10:45 by kyekim           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
+
+int		ft_strlen(char *src)
+{
+	unsigned int i;
+
+	i = 0;
+	while (src[i] != '\0')
+		i++;
+	return (i + 1);
+}
 
 char	*ft_strdup(char *src)
 {
-	char *res;
-	int i;
+	unsigned int	length;
+	unsigned int	count;
+	char			*dest;
 
-	i = 0;
-	while (src[i])
-		i++;
-	res = (char *)malloc(sizeof(char) * (i + 1));
-	while (src[i])
+	length = ft_strlen(src);
+	dest = malloc(sizeof(char) * length);
+	if (!dest)
+		return (0);
+	count = 0;
+	while (src[count] != '\0')
 	{
-		res[i] = src[i];
-		i++;
+		dest[count] = src[count];
+		count++;
 	}
-	res[i] = '\0';
-	return (res);
+	dest[count] = '\0';
+	return (dest);
 }

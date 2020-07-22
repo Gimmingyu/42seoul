@@ -6,11 +6,11 @@
 /*   By: kyekim <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 19:20:11 by kyekim            #+#    #+#             */
-/*   Updated: 2020/07/08 20:57:26 by kyekim           ###   ########.fr       */
+/*   Updated: 2020/07/08 21:21:07 by kyekim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	tf_sort_int_tab(int *tab, int size)
+void	ft_sort_int_tab(int *tab, int size)
 {
 	int i;
 	int j;

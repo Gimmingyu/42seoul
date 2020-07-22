@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kyekim <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kyekim <kyekim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/15 20:41:12 by kyekim            #+#    #+#             */
-/*   Updated: 2020/07/15 20:41:12 by kyekim           ###   ########.fr       */
+/*   Created: 2020/07/16 01:04:29 by kyekim            #+#    #+#             */
+/*   Updated: 2020/07/16 02:30:32 by kyekim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@ int		ft_strlen(char *str)
 	int cnt;
 
 	cnt = 0;
-	while (*str ++ != '\0')
+	while (*str != '\0')
+	{
 		cnt++;
-	return cnt;
+		str++;
+	}
+	return (cnt);
 }

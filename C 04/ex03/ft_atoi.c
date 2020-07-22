@@ -1,29 +1,51 @@
-int		sign_check(int sign_cnt)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kyekim <kyekim@student.42seoul.kr>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/16 00:44:11 by kyekim            #+#    #+#             */
+/*   Updated: 2020/07/16 02:34:29 by kyekim           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int		check_char(char c)
 {
-	if (sign_cnt % 2 == 1)
+	if (c == '\t' || c == '\n' || c == '\v'
+			|| c == '\f' || c == '\r' || c == ' ')
+		return (1);
+	if (c == '-')
 		return (-1);
-	return (-1);
+	if (c == '+')
+		return (-2);
+	if (c >= '0' && c <= '9')
+		return (2);
+	return (0);
 }
 
-int 	ft_atoi(char *str)
+int		ft_atoi(char *str)
 {
-	int sign_cnt;
-	int num;
+	int index;
+	int count;
+	int result;
 
-	sign_cnt = 0;
-	while (*str == '\t' || *str == '\n' || *str == '\v'
-				|| *str == '\f' || *str == '\r' || *str == ' ')
-		str++;
-	while (*str == '-' || *str == '+')
+	index = 0;
+	while (check_char(str[index]) == 1)
+		index++;
+	count = 0;
+	while (check_char(str[index]) < 0)
 	{
-		if (*str == '-')
-			sign_cnt++;
-		str++;
+		if (check_char(str[index]) == -1)
+			count++;
+		index++;
 	}
-	while (*str >= '0' && *str <='9')
-	{
-		num = num * 10 + *str - '0';
-		str++;
-	}
-	return (sign_check(sign_cnt) * num);
+	if (str[index] < '0' || str[index] > '9')
+		return (0);
+	result = str[index++] - '0';
+	while (check_char(str[index]) == 2)
+		result = result * 10 + str[index++] - '0';
+	if (count % 2 == 1)
+		result *= -1;
+	return (result);
 }

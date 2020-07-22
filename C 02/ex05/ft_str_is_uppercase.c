@@ -5,20 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kyekim <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 21:53:03 by kyekim            #+#    #+#             */
-/*   Updated: 2020/07/08 21:53:25 by kyekim           ###   ########.fr       */
+/*   Created: 2020/07/13 12:11:34 by kyekim            #+#    #+#             */
+/*   Updated: 2020/07/13 12:11:35 by kyekim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_str_is_uppercase(char *str)
 {
+	int answer;
+
+	answer = 1;
 	while (*str != '\0')
 	{
-		if (!(*str >= 'A' && *str <= 'Z'))
+		if (!(*str >= 65 && *str <= 90))
 		{
-			return (0);
+			answer = 0;
 		}
 		str++;
 	}
-	return (1);
+	return (answer);
 }

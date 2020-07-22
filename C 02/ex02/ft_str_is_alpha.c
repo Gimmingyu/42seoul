@@ -5,18 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kyekim <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 21:04:45 by kyekim            #+#    #+#             */
-/*   Updated: 2020/07/08 21:16:08 by kyekim           ###   ########.fr       */
+/*   Created: 2020/07/13 12:10:46 by kyekim            #+#    #+#             */
+/*   Updated: 2020/07/13 12:10:48 by kyekim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_str_is_alpha(char *str)
 {
+	int answer;
+
+	answer = 1;
 	while (*str != '\0')
 	{
-		if (!((*str >= 'a' && *str <= 'z') || (*str >= 'A' && *str <= 'Z')))
-			return (0);
+		if (!(*str >= 65 && *str <= 122))
+		{
+			answer = 0;
+		}
+		else if (*str >= 91 && *str <= 96)
+		{
+			answer = 0;
+		}
 		str++;
 	}
-	return (1);
+	return (answer);
 }

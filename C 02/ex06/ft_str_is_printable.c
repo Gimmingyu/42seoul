@@ -5,20 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kyekim <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 21:53:43 by kyekim            #+#    #+#             */
-/*   Updated: 2020/07/08 22:03:36 by kyekim           ###   ########.fr       */
+/*   Created: 2020/07/13 12:11:43 by kyekim            #+#    #+#             */
+/*   Updated: 2020/07/13 12:11:45 by kyekim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_str_is_printable(char *str)
 {
+	int answer;
+
+	answer = 1;
 	while (*str != '\0')
 	{
-		if (!(*str >= ' ' && *str <= '~'))
+		if (!(*str >= 32 && *str <= 126))
 		{
-			return (0);
+			answer = 0;
 		}
 		str++;
 	}
-	return (1);
+	return (answer);
 }

@@ -1,55 +1,78 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort_params.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kyekim <kyekim@student.42seoul.kr>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/16 10:28:21 by kyekim            #+#    #+#             */
+/*   Updated: 2020/07/16 12:44:39 by kyekim           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
-int		ft_strcmp(char *s1, char *s2)
+int		cmp_str(char *s1, char *s2)
 {
-	while ((*s1 == *s2) && *s1 != '\0')
+	int i;
+
+	i = 0;
+	while (s1[i] && s2[i])
 	{
-		s1++;
-		s2++;
+		if (s1[i] > s2[i])
+			return (1);
+		if (s1[i] < s2[i])
+			return (-1);
+		i++;
 	}
-	return (*(unsigned char*)s1 - *(unsigned char*)s2);
+	if (!s1[i] && !s2[i])
+		return (0);
+	if (s1[i])
+		return (1);
+	return (-1);
 }
 
-void	ft_sort_string(char *str[], int size)
+void	print(int argc, char *argv[])
 {
 	int i;
 	int j;
-	char *tmp;
 
-	i = 0;
-	while (i < size - 1)
+	i = 1;
+	while (i < argc)
 	{
 		j = 0;
-		while (j < size - 1 - i)
+		while (argv[i][j])
 		{
-			if (ft_strcmp(str[j], str[j + 1]) < 0)
+			write(1, &argv[i][j], 1);
+			j++;
+		}
+		write(1, "\n", 1);
+		i++;
+	}
+}
+
+int		main(int argc, char *argv[])
+{
+	int		i;
+	int		j;
+	char	*temp;
+
+	i = 1;
+	while (i < argc)
+	{
+		j = i + 1;
+		while (j < argc)
+		{
+			if (cmp_str(argv[i], argv[j]) > 0)
 			{
-				tmp = str[j];
-				str[j] = str[j + 1];
-				str[j] = tmp;
+				temp = argv[i];
+				argv[i] = argv[j];
+				argv[j] = temp;
 			}
 			j++;
 		}
 		i++;
 	}
-}
-
-void	ft_putstr(char *str)
-{
-	while (*str++ != '\0')
-		write(1, str, 1);
-}
-
-int		main(int argc, char *argv[])
-{
-	int i;
-
-	i = argc - 1;
-	ft_sort_string(argv + 1, argc - 1);
-	while (i-- > 0)
-	{
-		ft_putstr(argv[i]);
-		write(1, "\n", 1);
-	}
+	print(argc, argv);
 	return (0);
 }
