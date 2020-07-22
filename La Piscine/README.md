@@ -23,7 +23,7 @@
 |C13|0%|Don't try|
 |Rush00|0%|norm error|
 |Rush01|0%|norm error|
-|Rush02|20%|norm error|
+|Rush02|0%|norm error|
 |BSQ|%|~ing|
 |Exam00|0%|09:30 ~ 13:30|
 |Exam01|32%|14:00 ~ 18:00|
