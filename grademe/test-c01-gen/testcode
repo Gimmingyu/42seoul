@@ -1,0 +1,123 @@
+ex00:
+
+	int i = 1423;
+	ft_ft(&i);
+	printf("%d\n", i);
+
+ex00-expected:
+42
+
+
+
+ex01:
+
+	int i = 1423;
+	int *i1 = &i;
+	int **i2 = &i1;
+	int ***i3 = &i2;
+	int ****i4 = &i3;
+	int *****i5 = &i4;
+	int ******i6 = &i5;
+	int *******i7 = &i6;
+	int ********i8 = &i7;
+	int *********i9 = &i8;
+	ft_ultimate_ft(i9);
+	printf("%d\n", i);
+
+ex01-expected:
+42
+
+
+ex02:
+
+	int i = 3;
+	int j = 5;
+	ft_swap(&i, &j);
+	printf("i, j: %d, %d", i, j);
+
+ex02-expected:
+i, j: 5, 3
+
+
+ex03:
+
+	int div = 0, mod = 0;
+	ft_div_mod(473, 25, &div, &mod);
+	printf("div, mod : %d, %d\n", div, mod);
+	ft_div_mod(-43, 3, &div, &mod);
+	printf("div, mod : %d, %d\n", div, mod);
+	ft_div_mod(0, 5, &div, &mod);
+	printf("div, mod : %d, %d\n", div, mod);
+
+ex03-expected:
+div, mod : 18, 23
+div, mod : -14, -1
+div, mod : 0, 0
+
+ex04:
+
+	int a = 473, b = 25;
+	ft_ultimate_div_mod(&a, &b);
+	printf("a, b : %d, %d\n", a, b);
+	a = -43, b = 3;
+	ft_ultimate_div_mod(&a, &b);
+	printf("a, b : %d, %d\n", a, b);
+	a = 0, b = 5;
+	ft_ultimate_div_mod(&a, &b);
+	printf("a, b : %d, %d\n", a, b);
+
+ex04-expected:
+a, b : 18, 23
+a, b : -14, -1
+a, b : 0, 0
+
+ex05:
+	ft_putstr("Hello World!\n");
+
+ex05-expected:
+Hello World!
+
+ex06:
+
+	int i = 0;
+	i = ft_strlen("Hello World!\n");
+	printf("len : %d", i);
+
+ex06-expected:
+len : 13
+
+ex07:
+
+	int test[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+	ft_rev_int_tab(test, 9);
+	for (int i = 0; i < 9; i++)
+	{
+		printf("%d, ", test[i]);
+	}
+	printf("\n");
+	ft_rev_int_tab(test, 3);
+	for (int i = 0; i < 9; i++)
+	{
+		printf("%d, ", test[i]);
+	}
+	printf("\n");
+
+ex07-expected:
+9, 8, 7, 6, 5, 4, 3, 2, 1,
+7, 8, 9, 6, 5, 4, 3, 2, 1,
+
+ex08:
+
+	int test[9] = {1, 6, 3, 8, 4, 2, 9, 7, 5};
+	ft_sort_int_tab(test, 9);
+	for (int i = 0; i < 9; i++) {
+		printf("%d, ", test[i]);
+	}
+	printf("\n");
+
+
+ex08-expected:
+1, 2, 3, 4, 5, 6, 7, 8, 9,
+
+end:

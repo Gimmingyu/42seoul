@@ -1,0 +1,206 @@
+include:
+
+	#include <stdio.h>
+	#include <stdarg.h>
+	#include <string.h>
+	#include <stdlib.h>
+
+ex00:
+	printf("%d\n", ft_iterative_factorial(-18));
+	printf("%d\n", ft_iterative_factorial(0));
+	printf("%d\n", ft_iterative_factorial(1));
+	printf("%d\n", ft_iterative_factorial(2));
+	printf("%d\n", ft_iterative_factorial(12));
+	printf("%d\n", ft_iterative_factorial(4));
+	printf("%d\n", ft_iterative_factorial(5));
+	printf("%d\n", ft_iterative_factorial(6));
+	printf("%d\n", ft_iterative_factorial(7));
+	printf("%d\n", ft_iterative_factorial(8));
+	printf("%d\n", ft_iterative_factorial(9));
+	printf("%d\n", ft_iterative_factorial(10));
+	printf("%d\n", ft_iterative_factorial(11));
+
+ex00-expected:
+Factorial -18 = 0
+Factorial 0 = 1
+Factorial 1 = 1
+Factorial 2 = 2
+Factorial 12 = 479001600
+Factorial 4 = 24
+Factorial 5 = 120
+Factorial 6 = 720
+Factorial 7 = 5040
+Factorial 8 = 40320
+Factorial 9 = 362880
+Factorial 10 = 3628800
+Factorial 11 = 39916800
+
+ex01:
+	printf("%d\n", ft_recursive_factorial(-18));
+	printf("%d\n", ft_recursive_factorial(0));
+	printf("%d\n", ft_recursive_factorial(1));
+	printf("%d\n", ft_recursive_factorial(2));
+	printf("%d\n", ft_recursive_factorial(12));
+	printf("%d\n", ft_recursive_factorial(4));
+	printf("%d\n", ft_recursive_factorial(5));
+	printf("%d\n", ft_recursive_factorial(6));
+	printf("%d\n", ft_recursive_factorial(7));
+	printf("%d\n", ft_recursive_factorial(8));
+	printf("%d\n", ft_recursive_factorial(9));
+	printf("%d\n", ft_recursive_factorial(10));
+	printf("%d\n", ft_recursive_factorial(11));
+
+ex01-expected:
+Factorial -18 = 0
+Factorial 0 = 1
+Factorial 1 = 1
+Factorial 2 = 2
+Factorial 12 = 479001600
+Factorial 4 = 24
+Factorial 5 = 120
+Factorial 6 = 720
+Factorial 7 = 5040
+Factorial 8 = 40320
+Factorial 9 = 362880
+Factorial 10 = 3628800
+Factorial 11 = 39916800
+
+ex02:
+
+	printf("%d\n", ft_iterative_power(-3293, -1509));
+	printf("%d\n", ft_iterative_power(0, 0));
+	printf("%d\n", ft_iterative_power(-371, 0));
+	printf("%d\n", ft_iterative_power(1109, 1));
+	printf("%d\n", ft_iterative_power(0, 3));
+	printf("%d\n", ft_iterative_power(8, 4));
+	printf("%d\n", ft_iterative_power(-8, 5));
+	printf("%d\n", ft_iterative_power(-5, 6));
+	printf("%d\n", ft_iterative_power(-4, 7));
+	printf("%d\n", ft_iterative_power(-3, 9));
+	printf("%d\n", ft_iterative_power(-2, 10));
+
+ex02-expected:
+-3293 ^ -1509 = 0
+0 ^ 0 = 1
+-371 ^ 0 = 1
+1109 ^ 1 = 1109
+0 ^ 3 = 0
+8 ^ 4 = 4096
+-8 ^ 5 = -32768
+-5 ^ 6 = 15625
+-4 ^ 7 = -16384
+-3 ^ 9 = -19683
+-2 ^ 10 = 1024
+
+ex03:
+
+	printf("%d\n", ft_recursive_power(-3293, -1509));
+	printf("%d\n", ft_recursive_power(0, 0));
+	printf("%d\n", ft_recursive_power(-371, 0));
+	printf("%d\n", ft_recursive_power(1109, 1));
+	printf("%d\n", ft_recursive_power(0, 3));
+	printf("%d\n", ft_recursive_power(8, 4));
+	printf("%d\n", ft_recursive_power(-8, 5));
+	printf("%d\n", ft_recursive_power(-5, 6));
+	printf("%d\n", ft_recursive_power(-4, 7));
+	printf("%d\n", ft_recursive_power(-3, 9));
+	printf("%d\n", ft_recursive_power(-2, 10));
+
+ex03-expected:
+-3293 ^ -1509 = 0
+0 ^ 0 = 1
+-371 ^ 0 = 1
+1109 ^ 1 = 1109
+0 ^ 3 = 0
+8 ^ 4 = 4096
+-8 ^ 5 = -32768
+-5 ^ 6 = 15625
+-4 ^ 7 = -16384
+-3 ^ 9 = -19683
+-2 ^ 10 = 1024
+
+ex04:
+
+	printf("%d\n", ft_fibonacci(-2));
+	printf("%d\n", ft_fibonacci(0));
+	printf("%d\n", ft_fibonacci(1));
+	printf("%d\n", ft_fibonacci(2));
+	printf("%d\n", ft_fibonacci(3));
+	printf("%d\n", ft_fibonacci(4));
+	printf("%d\n", ft_fibonacci(5));
+
+ex04-expected:
+
+-1
+0
+1
+1
+2
+3
+5
+
+ex05:
+
+	printf("%d\n", ft_sqrt(-2));
+	printf("%d\n", ft_sqrt(0));
+	printf("%d\n", ft_sqrt(1));
+	printf("%d\n", ft_sqrt(4));
+	printf("%d\n", ft_sqrt(6));
+	printf("%d\n", ft_sqrt(9));
+	printf("%d\n", ft_sqrt(15));
+	printf("%d\n", ft_sqrt(16));
+	printf("%d\n", ft_sqrt(17));
+
+ex05-expected:
+0
+0
+1
+2
+0
+3
+0
+4
+0
+
+ex06:
+	printf("-5: %d\n", ft_is_prime(-5));
+	printf(" 0: %d\n", ft_is_prime(0));
+	printf(" 1: %d\n", ft_is_prime(1));
+	printf(" 2: %d\n", ft_is_prime(2));
+	printf(" 3: %d\n", ft_is_prime(3));
+	printf(" 4: %d\n", ft_is_prime(4));
+	printf(" 7: %d\n", ft_is_prime(7));
+	printf("10: %d\n", ft_is_prime(10));
+
+
+ex06-expected:
+
+-5: 0
+ 0: 0
+ 1: 0
+ 2: 1
+ 3: 1
+ 4: 0
+ 7: 1
+10: 0
+
+ex07:
+	printf("%d\n", ft_find_next_prime(-2));
+	printf("%d\n", ft_find_next_prime(24));
+	printf("%d\n", ft_find_next_prime(29));
+	printf("%d\n", ft_find_next_prime(2147483629));
+	printf("%d\n", ft_find_next_prime(2147483630));
+	
+
+ex07-expected:
+
+2147483630 넣었을 때 2147483647 이 빨리 나오는 게 관건
+(타임아웃 조심)
+
+ex08:
+	printf("%d\n", ft_ten_queens_puzzle());
+ex08-expected:
+
+724개가 나오면 정상!
+
+end:

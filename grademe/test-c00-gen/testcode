@@ -1,0 +1,77 @@
+ex00:
+
+	ft_putchar(67);
+	ft_putchar('a');
+	ft_putchar('9');
+
+
+ex00-expected:
+
+직접 확인 바랍니다.
+
+ex01:
+	ft_print_alphabet();
+
+ex01-expected:
+직접 확인 바랍니다.
+
+ex02:
+	ft_print_reverse_alphabet();
+
+ex02-expected:
+직접 확인 바랍니다.
+
+ex03:
+	ft_print_numbers();
+
+ex03-expected:
+직접 확인 바랍니다.
+
+ex04:
+	ft_is_negative(457);
+	ft_is_negative(-132);
+	ft_is_negative(0);
+	ft_is_negative(-2147483648);
+	ft_is_negative(2147483647);
+
+
+ex04-expected:
+직접 확인 바랍니다.
+
+
+ex05:
+	ft_print_comb();
+
+ex05-expected:
+직접 확인 바랍니다.
+
+
+ex06:
+	ft_print_comb2();
+
+ex06-expected:
+직접 확인 바랍니다.
+
+
+ex07:
+	ft_putnbr(24);
+	ft_putnbr(-42);
+	ft_putnbr(0);
+	ft_putnbr(-2147483648);
+	ft_putnbr(2147483647);
+
+ex07-expected:
+직접 확인 바랍니다.
+
+
+
+ex08:
+	ft_print_combn(1);
+	ft_print_combn(4);
+	ft_print_combn(9);
+
+ex08-expected:
+직접 확인 바랍니다.
+
+
+end:

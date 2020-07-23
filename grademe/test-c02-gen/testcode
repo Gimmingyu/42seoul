@@ -1,0 +1,201 @@
+include:
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdarg.h>
+#include <unistd.h>
+#include <string.h>
+ex00-other:
+
+// hello world!!
+
+
+ex00:
+
+	char c[20];
+
+	printf("%s\n", ft_strcpy(c, "12345678912345678900"));
+	printf("%s\n", ft_strcpy(c, "ujuj"));
+	printf("%s\n", ft_strcpy(c, "1234"));
+
+
+ex00-expected:
+12345678912345678900
+ujuj
+1234
+
+
+
+
+ex01:
+	char c[20];
+
+	printf("%s\n", ft_strncpy(c, "1234567891234567890", 21));
+	printf("%s\n", ft_strncpy(c, "ujuj", 3));
+	printf("%s\n", ft_strncpy(c, "1234", 20));
+	write(1, c, 20);
+
+ex01-expected:
+
+1234567891234567890
+uju4567891234567890
+1234
+1234
+
+ex02:
+
+	printf("%d", ft_str_is_alpha("abcvgj"));
+	printf("%d", ft_str_is_alpha("A0fdfz"));
+	printf("%d", ft_str_is_alpha(""));
+
+ex02-expected:
+101
+
+
+ex03:
+
+	printf("%d", ft_str_is_numeric("123"));
+	printf("%d", ft_str_is_numeric("a23"));
+	printf("%d", ft_str_is_numeric("12z"));
+	printf("%d", ft_str_is_numeric(""));
+
+ex03-expected:
+1001
+
+ex04:
+
+	printf("%d", ft_str_is_lowercase("acb"));
+	printf("%d", ft_str_is_lowercase("aCt"));
+	printf("%d", ft_str_is_lowercase("Cat"));
+	printf("%d", ft_str_is_lowercase(""));
+
+ex04-expected:
+1001
+
+ex05:
+	printf("%d", ft_str_is_uppercase("ABC"));
+	printf("%d", ft_str_is_uppercase("aCI"));
+	printf("%d", ft_str_is_uppercase("Cat"));
+	printf("%d", ft_str_is_uppercase(""));
+
+ex05-expected:
+1001
+
+ex06:
+
+	printf("%d", ft_str_is_printable("A~C"));
+	printf("%d", ft_str_is_printable("a\nI"));
+	printf("%d", ft_str_is_printable("C\tt"));
+	printf("%d", ft_str_is_printable(""));
+
+ex06-expected:
+1001
+
+ex07:
+	char c[100] = "abDc";
+	printf("%s\n", ft_strupcase(c));
+	strcpy(c, "aI");
+	printf("%s\n", ft_strupcase(c));
+	strcpy(c, "0fN99");
+	printf("%s\n", ft_strupcase(c));
+	strcpy(c, "");
+	printf("%s\n", ft_strupcase(c));
+
+ex07-expected:
+ABDC
+AI
+0FN99
+
+
+ex08:
+
+	char c[100] = "abDc";
+	printf("%s\n", ft_strlowcase(c));
+	strcpy(c, "aI");
+	printf("%s\n", ft_strlowcase(c));
+	strcpy(c, "0fN99");
+	printf("%s\n", ft_strlowcase(c));
+	strcpy(c, "");
+	printf("%s\n", ft_strlowcase(c));
+
+
+ex08-expected:
+abdc
+ai
+0fn99
+
+
+ex09:
+
+	char c[100] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
+	printf("%s\n", ft_strcapitalize(c));
+	strcpy(c, "saLuT, comMeNT");
+	printf("%s\n", ft_strcapitalize(c));
+
+ex09-expected:
+Salut, Comment Tu Vas ? 42mots Quarante-Deux; Cinquante+Et+Un
+Salut, Comment
+
+
+ex10:
+	char o[20];
+	printf("returned - %lu, string - %s \n", strlcpy(o, "abcdef", 10L), o);
+	printf("returned - %lu, string - %s \n", strlcpy(o, "123456", 6L), o);
+	printf("returned - %lu, string - %s \n", strlcpy(o, "abcdef", 7L), o);
+	printf("returned - %lu, string - %s \n", strlcpy(o, "123456", 3L), o);
+	printf("returned - %lu, string - %s \n", strlcpy(o, "abcef", 0L), o);
+	printf("-------------------\n");
+	printf("returned - %u, string - %s \n", ft_strlcpy(o, "abcdef", 10L), o);
+	printf("returned - %u, string - %s \n", ft_strlcpy(o, "123456", 6L), o);
+	printf("returned - %u, string - %s \n", ft_strlcpy(o, "abcdef", 7L), o);
+	printf("returned - %u, string - %s \n", ft_strlcpy(o, "123456", 3L), o);
+	printf("returned - %u, string - %s \n", ft_strlcpy(o, "abcef", 0L), o);
+
+ex10-expected:
+
+ex11:
+	char o[100] = "Coucou\ntu vas bien ?";
+	ft_putstr_non_printable(o);
+	char all_character[256];
+	for(int i = 0;i<255;i++)
+		all_character[i] = (char)(i + 1);
+	all_character[255] = '\0';
+	ft_putstr_non_printable(all_character);
+
+
+ex11-expected:
+Coucou\0atu vas bien ?\01\02\03\04\05\06\07\08\09\0a\0b\0c\0d\0e\0f\10\11\12\13\14\15\16\17\18\19\1a\1b\1c\1d\1e\1f !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~\7f\80\81\82\83\84\85\86\87\88\89\8a\8b\8c\8d\8e\8f\90\91\92\93\94\95\96\97\98\99\9a\9b\9c\9d\9e\9f\a0\a1\a2\a3\a4\a5\a6\a7\a8\a9\aa\ab\ac\ad\ae\af\b0\b1\b2\b3\b4\b5\b6\b7\b8\b9\ba\bb\bc\bd\be\bf\c0\c1\c2\c3\c4\c5\c6\c7\c8\c9\ca\cb\cc\cd\ce\cf\d0\d1\d2\d3\d4\d5\d6\d7\d8\d9\da\db\dc\dd\de\df\e0\e1\e2\e3\e4\e5\e6\e7\e8\e9\ea\eb\ec\ed\ee\ef\f0\f1\f2\f3\f4\f5\f6\f7\f8\f9\fa\fb\fc\fd\fe\ff
+
+ex12:
+	unsigned char a[256];
+	for(int i=0;i<256;i++)
+	{
+		a[i] = i+1;
+	}
+
+	ft_print_memory(a, 251);
+	ft_print_memory(a, 24);
+	ft_print_memory(a, 0);
+	return (0);
+
+ex12-expected:
+(메모리 주소는 달라질 수 있습니다.)
+00007ffee93d4590: 0102 0304 0506 0708 090a 0b0c 0d0e 0f10 ................
+00007ffee93d45a0: 1112 1314 1516 1718 191a 1b1c 1d1e 1f20 ...............
+00007ffee93d45b0: 2122 2324 2526 2728 292a 2b2c 2d2e 2f30 !"#$%&'()*+,-./0
+00007ffee93d45c0: 3132 3334 3536 3738 393a 3b3c 3d3e 3f40 123456789:;<=>?@
+00007ffee93d45d0: 4142 4344 4546 4748 494a 4b4c 4d4e 4f50 ABCDEFGHIJKLMNOP
+00007ffee93d45e0: 5152 5354 5556 5758 595a 5b5c 5d5e 5f60 QRSTUVWXYZ[\]^_`
+00007ffee93d45f0: 6162 6364 6566 6768 696a 6b6c 6d6e 6f70 abcdefghijklmnop
+00007ffee93d4600: 7172 7374 7576 7778 797a 7b7c 7d7e 7f80 qrstuvwxyz{|}~..
+00007ffee93d4610: 8182 8384 8586 8788 898a 8b8c 8d8e 8f90 ................
+00007ffee93d4620: 9192 9394 9596 9798 999a 9b9c 9d9e 9fa0 ................
+00007ffee93d4630: a1a2 a3a4 a5a6 a7a8 a9aa abac adae afb0 ................
+00007ffee93d4640: b1b2 b3b4 b5b6 b7b8 b9ba bbbc bdbe bfc0 ................
+00007ffee93d4650: c1c2 c3c4 c5c6 c7c8 c9ca cbcc cdce cfd0 ................
+00007ffee93d4660: d1d2 d3d4 d5d6 d7d8 d9da dbdc ddde dfe0 ................
+00007ffee93d4670: e1e2 e3e4 e5e6 e7e8 e9ea ebec edee eff0 ................
+00007ffee93d4680: f1f2 f3f4 f5f6 f7f8 f9fa fb             ...........
+00007ffee93d4590: 0102 0304 0506 0708 090a 0b0c 0d0e 0f10 ................
+00007ffee93d45a0: 1112 1314 1516 1718                     ........
+
+end:

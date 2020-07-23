@@ -1,0 +1,127 @@
+include:
+
+	#include <stdio.h>
+	#include <stdarg.h>
+	#include <string.h>
+	#include <stdlib.h>
+
+ex00:
+	printf("system:\n");
+	printf("%d ",strcmp("", "abc"));
+	printf("%d ",strcmp("abc", ""));
+	printf("%d ",strcmp("abc", "abc"));
+	printf("%d ",strcmp("abd", "abe"));
+	printf("%d ",strcmp("abc", "abcde"));
+	printf("%d ",strcmp("abcde", "abc"));
+	printf("\n----------------\nUser Created:\n");
+	printf("%d ",ft_strcmp("", "abc"));
+	printf("%d ",ft_strcmp("abc", ""));
+	printf("%d ",ft_strcmp("abc", "abc"));
+	printf("%d ",ft_strcmp("abd", "abe"));
+	printf("%d ",ft_strcmp("abc", "abcde"));
+	printf("%d ",ft_strcmp("abcde", "abc"));
+
+ex00-expected:
+
+ex01:
+	printf("system:\n");
+	printf("%d ",strncmp("", "abc", 1));
+	printf("%d ",strncmp("abc", "de", 0));
+	printf("%d ",strncmp("abc", "abc", 5));
+	printf("%d ",strncmp("abd", "abe", 2));
+	printf("%d ",strncmp("abcde", "abc", 5));
+	printf("%d ",strncmp("abcde", "abc", 3));
+	printf("\n----------------\nUser Created:\n");
+	printf("%d ",ft_strncmp("", "abc", 1));
+	printf("%d ",ft_strncmp("abc", "de", 0));
+	printf("%d ",ft_strncmp("abc", "abc", 5));
+	printf("%d ",ft_strncmp("abd", "abe", 2));
+	printf("%d ",ft_strncmp("abcde", "abc", 5));
+	printf("%d ",ft_strncmp("abcde", "abc", 3));
+	printf("\n");
+
+ex01-expected:
+
+
+ex02:
+	char dest[100];
+	printf("system:\n");
+	strcpy(dest, "1");
+	printf("%s\n", strcat(dest, "abc"));
+	printf("%s\n", strcat(dest, "123"));
+	printf("%s\n", strcat(dest, ""));
+	printf("%s\n", strcat(dest, "zz\0zz"));
+	printf("\n----------------\nUser Created:\n");
+	strncpy(dest, "1", 20);
+	printf("%s\n", ft_strcat(dest, "abc"));
+	printf("%s\n", ft_strcat(dest, "123"));
+	printf("%s\n", ft_strcat(dest, ""));
+	printf("%s\n", ft_strcat(dest, "zz\0zz"));
+
+ex02-expected:
+
+ex03:
+	char dest[100];
+	printf("system:\n");
+	strcpy(dest, "1");
+	printf("%s\n", strncat(dest, "12", 2));
+	printf("%s\n", strncat(dest, "abcd", 2));
+	printf("%s\n", strncat(dest, "zz", 5));
+	printf("%s\n", strncat(dest, "oo", 3));
+	printf("%s\n", strncat(dest, "null?\0null!", 11));
+	printf("%s\n", strncat(dest, "zero", 0));
+	printf("\n----------------\nUser Created:\n");
+	strncpy(dest, "1", 20);
+	printf("%s\n", ft_strncat(dest, "12", 2));
+	printf("%s\n", ft_strncat(dest, "abcd", 2));
+	printf("%s\n", ft_strncat(dest, "zz", 5));
+	printf("%s\n", ft_strncat(dest, "oo", 3));
+	printf("%s\n", ft_strncat(dest, "null?\0null!", 11));
+	printf("%s\n", ft_strncat(dest, "zero", 0));
+
+
+ex03-expected:
+
+ex04:
+	printf("system:\n");
+	printf("%s\n", strstr("abcd", "bcd"));
+	printf("%s\n", strstr("bbbbaaaa", "a"));
+	printf("%s\n", strstr("abcd", "abcdef"));
+	printf("%s\n", strstr("abcdbcdbcd", "bcd"));
+	printf("%s\n", strstr("none", ""));
+	printf("\n----------------\nUser Created:\n");
+	printf("%s\n", ft_strstr("abcd", "bcd"));
+	printf("%s\n", ft_strstr("bbbbaaaa", "a"));
+	printf("%s\n", ft_strstr("abcd", "abcdef"));
+	printf("%s\n", ft_strstr("abcdbcdbcd", "bcd"));
+	printf("%s\n", ft_strstr("none", ""));
+
+ex04-expected:
+
+ex05:
+	char dest[100];
+	strcpy(dest, "a");
+	printf("system:\n");
+	printf("%lu %s\n", strlcat(dest, "power", 4), dest);
+	printf("%lu %s\n", strlcat(dest, "po", 100), dest);
+	printf("%lu %s\n", strlcat(dest, "ma", 2), dest);
+	printf("%lu %s\n", strlcat(dest, "naver", 20), dest);
+	printf("%lu %s\n", strlcat(dest, "zero", 0), dest);
+	printf("\n----------------\nUser Created:\n");
+	strncpy(dest, "a", 70);
+	printf("%u %s\n", ft_strlcat(dest, "power", 4), dest);
+	printf("%u %s\n", ft_strlcat(dest, "po", 100), dest);
+	printf("%u %s\n", ft_strlcat(dest, "ma", 2), dest);
+	printf("%u %s\n", ft_strlcat(dest, "naver", 20), dest);
+	printf("%u %s\n", ft_strlcat(dest, "zero", 0), dest);
+
+
+
+
+ex05-expected:
+
+// initial length 는 len(dest)와 size중 더 작은 값
+// return value는 initial length + len(src)
+
+
+end:

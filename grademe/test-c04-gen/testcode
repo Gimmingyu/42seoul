@@ -1,0 +1,111 @@
+include:
+	#include <stdio.h>
+	#include <stdarg.h>
+	#include <string.h>
+	#include <stdlib.h>
+	#include <unistd.h>
+ex00:
+	printf("system: \n");
+	printf("%lu ", strlen(""));
+	printf("%lu ", strlen("abc"));
+	printf("%lu ", strlen("abcde\0abc"));
+	printf("\n-----------------------------\n");
+	printf("Pisciner Made: \n");
+	printf("%d ", ft_strlen(""));
+	printf("%d ", ft_strlen("abc"));
+	printf("%d ", ft_strlen("abcde\0abc"));
+	printf("\n");
+ex00-expected:
+ex01:
+	printf("system: \n");
+	printf("hello\n");
+	printf("");
+	printf("end~\n");
+	printf("\n-----------------------------\n");
+	printf("Pisciner Made: \n");
+	ft_putstr("hello\n");
+	ft_putstr("");
+	ft_putstr("end~\n");
+ex01-expected:
+ex02:
+	ft_putnbr(12);
+	ft_putnbr(-34);
+	ft_putnbr(0);
+	ft_putnbr(-2147483648);
+	ft_putnbr(2147483647);
+ex02-expected:
+12-340-21474836482147483647
+ex03:
+	printf("system: \n");
+	printf("%d ", atoi(" 1"));
+	// +- 조합은 라이브러리 함수에서 먹히지 않네요
+	printf("%d ", /*atoi("   --+--+1234ab567")*/1234);
+	printf("%d ", /*atoi("   -+--++++2")*/-2);
+	printf("%d ", atoi("-134ab567"));
+	printf("%d ", atoi("134ab567"));
+	printf("%d ", atoi("\n \v \f \r \t  -13"));
+	printf("%d ", atoi(" a"));
+	printf("%d ", atoi("-"));
+	printf("%d ", atoi(" +3-3+2 3"));
+	// printf("%d %d %d %d %d %d", '\n', '\v', '\r', '\f', '\t', ' ');
+	printf("\n-----------------------------\n");
+	printf("Pisciner Made: \n");
+	printf("%d ", ft_atoi(" 1"));
+	printf("%d ", ft_atoi("   --+--+1234ab567"));
+	printf("%d ", ft_atoi("   -+--++++2"));
+	printf("%d ", ft_atoi("-134ab567"));
+	printf("%d ", ft_atoi("134ab567"));
+	printf("%d ", ft_atoi("\n \v \f \r \t  -13"));
+	printf("%d ", ft_atoi(" a"));
+	printf("%d ", ft_atoi("-"));
+	printf("%d ", ft_atoi(" +3-3+2 3"));
+	printf("\n");
+ex03-expected:
+9('\t') 10('\n') 11('\v') 12('\f') 13('\r') 32(' ')
+ex04:
+	ft_putnbr_base(7290, "0123456789");
+	printf("\n");
+	ft_putnbr_base(7290, "abcdefghij");
+	printf("\n");
+	ft_putnbr_base(-12, "01");
+	printf("\n");
+	ft_putnbr_base(42, "0112345678");
+	printf("\n");
+	ft_putnbr_base(42, "012345 678");
+	printf("\n");
+	ft_putnbr_base(42, "01+2345678");
+	printf("\n");
+	ft_putnbr_base(42, "01-2345678");
+	printf("\n");
+	ft_putnbr_base(145062, "mrdoc");
+	printf("\n");
+	ft_putnbr_base(-2147483648, "0123456789");
+	printf("\n");
+	ft_putnbr_base(0, "0123456789");
+	printf("\n");
+ex04-expected:
+7290
+hcja
+-1100
+
+42
+
+
+rcrdmddd
+-2147483648
+0
+ex05:
+	printf("%d ", ft_atoi_base("42", "0123456789"));
+	printf("%d ", ft_atoi_base("   42abc", "0123456789"));
+	printf("%d ", ft_atoi_base("  +--++-rcrdmddd+-abc", "mrdoc"));
+	printf("%d ", ft_atoi_base("-10000000000000000000000000000000", "01"));
+	printf("%d ", ft_atoi_base("8888888888888888888888888888888", "a8"));
+	printf("%d ", ft_atoi_base("one", "e"));
+	printf("%d ", ft_atoi_base("blank", ""));
+	printf("%d ", ft_atoi_base("", "za"));
+	printf("%d ", ft_atoi_base("ca", "zaca"));
+	printf("%d ", ft_atoi_base("ca", "z\v\f\nac"));
+	printf("\n");
+ex05-expected:
+42 42 -145062 -2147483648 2147483647 0 0 0 0 0
+end:
