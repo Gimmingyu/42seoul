@@ -23,7 +23,6 @@ Shell 00, Shell 01을 풀면서 배웠던 내용들
 * Etc
   * [Mac](#mac)
   * [Vim](#vim)
-  * [Guacamole](#guacamole)
 
 <br><br>
 
@@ -405,11 +404,10 @@ Norme: ./[c파일3]
 ## Vim
 |동작|<center>단축키</center>|
 |:--:|:--|
-|줄 지우기|명령, DD|
-|해당 줄 이동하기|```esc``` + ```: [line number]```|
-||```[line number]``` + ```gg``|
-|한 번에 탭 여러개 열기|```vi -p [file]``` # vi -p ex*/ft*.c<br>```esc```<br><br>- 참고: ```:buffers```를 하면 켜진 창 목록 확인|
-|Split 기능: 창분할(현재 창 복사)|```esc```<br>```split``|
-|이동|- 창 사이: ```ctrl + ww```<br>- 탭 사이: ```g```누르고 뗀 다음 ```t``` (go tab)<br><br>- 참고: ssh 원격접속에서는<br>```~./vimrc```생성, ```nnoremap <S-w> <C-w>```입력, ```Shift-w```로 동작 가능|
+|줄 지우기|```dd```<br>여러 줄을 없애고 싶으면 ```[number]dd```|
+|해당 줄 이동하기|```esc```, ```:[line number]```<br>또는<br>```[line number]``` + ```gg```|
+|한 번에 탭 여러개 열기|```vi -p [file]```      # vi -p ex*/ft*.c<br><br>[참고] ```esc```, ```:buffers```를 하면 켜진 창 목록 확인|
+|Split 기능: 창분할(현재 창 복사)|```esc```, ```:split```|
+|이동|- 창 사이: ```ctrl``` + ```ww```<br>- 탭 사이: ```g```누르고 뗀 다음 ```t``` (go tab)<br><br>[참고] ssh 원격접속에서는<br>```~./vimrc```생성, ```nnoremap <S-w> <C-w>```입력, ```Shift-w```로 동작 가능|
 
 </details>
