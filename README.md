@@ -23,6 +23,7 @@ Shell 00, Shell 01을 풀면서 배웠던 내용들
 * Etc
   * [Mac](#mac)
   * [Vim](#vim)
+  * [zsh](#zsh)
 
 <br><br>
 
@@ -66,6 +67,7 @@ Norme: ./[c파일3]
   /* ************************************************************************** */
 
   ```
+* 자신의 이메일 설정: ```vim ~/.profile``` -> ```export MAIL=메일계정``` -> ```source ~/.profile```
 
 ## Coding Rule
 * 사용 금지 함수를 사용하면 부정 행위로 간주됨. -42점이 부여되며, 받은 점수는 절대로 수정 불가능
@@ -395,11 +397,11 @@ Norme: ./[c파일3]
 <summary>Etc</summary>
 
 ## Mac
-|동작|세부동작|단축키|
-|:--:|:--:|:--:|
-|캡쳐|전체|Command + Shift + Control + 3|
-||선택영역|Command + Shift + 4|
-||선택창|Command + Shift + 4, 캡처할 창에 커서를 올리고 Space, 클릭|
+|동작|세부동작|<center>단축키</center>|
+|:--:|:--:|:--|
+|캡쳐|전체|```Command``` + ```Shift``` + ```Control``` + ```3```|
+||선택영역|```Command``` + ```Shift``` + ```4```|
+||선택창|```Command``` + ```Shift``` + ```4```, 캡처할 창에 커서를 올리고 ```Space```, 클릭|
 
 ## Vim
 |동작|<center>단축키</center>|
@@ -409,5 +411,10 @@ Norme: ./[c파일3]
 |한 번에 탭 여러개 열기|```vi -p [file]```      # vi -p ex*/ft*.c<br><br>[참고] ```esc```, ```:buffers```를 하면 켜진 창 목록 확인|
 |Split 기능: 창분할(현재 창 복사)|```esc```, ```:split```|
 |이동|- 창 사이: ```ctrl``` + ```ww```<br>- 탭 사이: ```g```누르고 뗀 다음 ```t``` (go tab)<br><br>[참고] ssh 원격접속에서는<br>```~./vimrc```생성, ```nnoremap <S-w> <C-w>```입력, ```Shift-w```로 동작 가능|
+
+## zsh
+|동작|<center>명령어</center>
+|:--:|:--|
+|현재 경로 바로 표시|```export PROMPT="%m %F{green}%~%f %#"```
 
 </details>
