@@ -1,0 +1,18 @@
+CC = gcc
+
+CFLAGS = -Wall -Werror -Wextra
+
+NAME = bsq
+
+all: $(NAME)
+
+$(NAME) : 
+		$(CC) $(CFLAGS) *.c -o $(NAME)
+
+clean :
+		rm -rf *.o
+
+fclean : clean
+		rm -rf $(NAME)
+
+re:	fclean all
