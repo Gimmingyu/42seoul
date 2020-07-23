@@ -1,6 +1,5 @@
-# 42seoul
-[![See & Run on Repl.it](https://repl.it/badge/github/kimkyeongnam/42seoul)](https://repl.it/github/kimkyeongnam/42seoul)
-<br>2기 1차: 이노베이션 아카데미 Piscine
+# Reference
+Shell 00, Shell 01을 풀면서 배웠던 내용들
 
 ## TOC
 * C language
@@ -17,13 +16,10 @@
   * [chmod](#chmod)
   * [file](#file)
   * [find](#find)
-  * [git](#git)
-  * [groups](#groups)
   * [hard-symbolic link](#hard-symbolic-link)
   * [klist](#klist)
   * [ls](#ls)
   * [tar](#tar)
-  * [tr](#tr)
 * Etc
   * [Mac](#mac)
   * [Vim](#vim) 
@@ -75,23 +71,6 @@ Norme: ./[c파일3]
 * 사용 금지 함수를 사용하면 부정 행위로 간주됨. -42점이 부여되며, 받은 점수는 절대로 수정 불가능
 * 꼭! 반드시 지키도록 하자!!
 * **Intra의 돋보기 섹션 >  42 학업 관련 자료 / Norm && Norminette** 에서도 확인이 가능함
-1. Conventions de denomination
-2. Formatage
-   * 모든 파일은 42헤더로 시작: [#42header](#3-42-header-파일-생성-시-꼭-만들어야-하는-header) 참고
-   * 들여쓰기는 공백 네 칸 크기의 탭으로 이루어져야 함. 띄어쓰기가 아닌 진짜 탭으로 구성
-     * ```#include <unistd.h>```:
-     * ```void    함수명(변수)```: 탭 한 번 
-     * ```int     main(void)```: 탭 두 번. int형같이 4글자보다 부족한 경우에는 한번 더 해야하는 듯
-   * 모든 함수는 함수 자체의 중괄호를 제외하고 25줄 이하
-      * 중괄호가 있는 줄은 중괄호만 존재해야 함
-        ```
-        int     main(void)
-        {
-            ft_putchar('h');
-            return (0);
-        }
-        ```
-   
 
 </details>
 
@@ -200,8 +179,13 @@ Norme: ./[c파일3]
   * ```-z```: 압축된 파일 확인
   * ```-L```: 심볼릭 링크 파일 확인
 * magic file
-  * file은 magic file이라는 것을 이용해 파일에 접근함<br>=magic file이 없으면 파일분류가 되지 않음=매직파일 안에 파일분류를 위한 정보가 들어있음
-  * 엔트리가 4개의 필드로 구성됨: ```[처음 혹은 이전 레벨로부터의 오프셋 값] [데이터 종류] [값] [출력 문자열] file```
+  * file은 magic file이라는 것을 이용해 파일에 접근함<br>=magic file이 없으면 파일분류가 되지 않음<br>=매직파일 안에 파일분류를 위한 정보가 들어있음
+  * 엔트리가 5개의 필드로 구성됨: ```[>*n] [오프셋 값] [데이터 종류] [값] [출력 문자열]```
+    * ```>*n```: 레벨. 단계. 해당 줄의 조건이 맞는다면 다음 단계로 넘어감
+    * ```오프셋 값```: 처음에서 n번째 바이트의 값
+    * ```데이터 종류```
+    * ```값```: 특정 값과 비교했을 때 조건에 맞는지 확인
+    * ```출력 문자열```: 특정 값과 비교했을 때 조건에 맞으면 해당 문자열 출력
   ```
   41 string 42 42 file
   ```
@@ -243,10 +227,6 @@ Norme: ./[c파일3]
    * ```-ctime```: 파일 내용 및 속성 변경(change) 시각을 기준으로 파일 검색
    * ```-mtime```: 파일의 데이터 수정(modify) 시각을 기준으로 파일 검색
    
-## git
-
-## groups
-
 ## Hard-Symbolic Link
 윈도우로 치면 "바로가기" 같은 개념이다. 리눅스에도 특정 파일이나 디렉터리에 링크 기능을 제공하는데, 제목에서 보다시피 두 가지가 있다.<br>두 개 모두 처리하는 역할은 같지만 개념은 다르다.
 ```
@@ -408,8 +388,6 @@ Norme: ./[c파일3]
   * ```-U```: tar 아카이브 추출 전, 기존 파일 삭제
   * ```-w```: 모든 진행 과정에 대해 확인 요청 (interactive)
   * ```-e```: 첫 번째 에러 발생 시 중지
-  
-## tr
 
 </details>
 
@@ -426,5 +404,5 @@ Norme: ./[c파일3]
 ## Vim
 |동작|단축키|
 |:--:|:--:|
-|줄 지우기|명렁, DD|
+|줄 지우기|명령, DD|
 </details>

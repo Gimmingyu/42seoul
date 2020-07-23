@@ -1,4 +1,4 @@
-# 42seoul: La Piscine C [![See & Run on Repl.it](https://repl.it/badge/github/kimkyeongnam/42seoul)](https://repl.it/github/kimkyeongnam/42seoul)
+# 42seoul: La Piscine C
 2기 1차: 이노베이션 아카데미 Piscine 
 
 #### 2020년 6월 29일 ~ 2020년 7월 24일
