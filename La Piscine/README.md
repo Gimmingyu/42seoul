@@ -24,7 +24,7 @@
 |Rush00|0%|norm error|
 |Rush01|0%|norm error|
 |Rush02|0%|norm error|
-|BSQ|%|~ing|
+|BSQ|0%|not finished|
 |Exam00|0%|09:30 ~ 13:30|
 |Exam01|32%|14:00 ~ 18:00|
 |Exam02|70%|14:00 ~ 18:00|
