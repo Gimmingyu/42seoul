@@ -21,6 +21,7 @@ La Piscine을 하면서 배운 것들
   * [ls](#ls)
   * [tar](#tar)
 * Etc
+  * [SSH](#ssh)
   * [Mac](#mac)
   * [Vim](#vim)
   * [zsh](#zsh)
@@ -395,6 +396,15 @@ Norme: ./[c파일3]
 
 <details>
 <summary>Etc</summary>
+
+## SSH
+[과카몰리](https://guacamole.42seoul.kr/)에서 git을 clone하려면 ssh를 발급해야한다.  
+이미 ssh key가 존재한다면 마지막 줄(3번째 줄)만 입력해서 복붙하면 된다.
+```bash
+cd ~/.ssh
+ssh-keygen # 아무런 입력 없이 계속 enter
+cat ~/.ssh/id_rsa.pub # 입력 후 나오는 값들을 복사, intra의 settings > New SSH Key에 붙여넣기 > Submit
+```
 
 ## Mac
 |동작|세부동작|<center>단축키</center>|
