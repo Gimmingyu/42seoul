@@ -6,7 +6,7 @@
 #    By: kyekim <kyekim@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/28 15:35:27 by kyekim            #+#    #+#              #
-#    Updated: 2020/09/30 02:48:02 by kyekim           ###   ########.fr        #
+#    Updated: 2020/09/30 19:12:24 by kyekim           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ FILES = ft_memset \
 		ft_strnstr \
 		ft_strncmp \
 		ft_atoi \
+		ft_bzero \
 		ft_isalpha \
 		ft_isdigit \
 		ft_isalnum \

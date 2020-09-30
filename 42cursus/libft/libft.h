@@ -6,7 +6,7 @@
 /*   By: kyekim <kyekim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 15:36:45 by kyekim            #+#    #+#             */
-/*   Updated: 2020/09/30 03:09:25 by kyekim           ###   ########.fr       */
+/*   Updated: 2020/09/30 19:07:31 by kyekim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
 # define INT_MAX_STR "2147483647"
 # define INT_MIN_STR "-2147483648"
 
-void	*ft_memset(void *b, int c, size_t len);
-void	ft_bzero(void *s, unsigned int n);
+void	*ft_memset(void *s, int c, size_t n);
+void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
