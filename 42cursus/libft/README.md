@@ -1,6 +1,7 @@
 # Libft
-* Grade: 115 / 115
-* Test file: [jtoty/Libftest](https://github.com/jtoty/Libftest)
+Grade: 115 / 115<br>
+Test file: [jtoty/Libftest](https://github.com/jtoty/Libftest)
+<br>
 
 ## Part 1 - Libc functions
 #### *Without External Function*
