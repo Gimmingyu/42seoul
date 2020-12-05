@@ -6,7 +6,7 @@
 /*   By: kyekim <kyekim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 22:13:24 by kyekim            #+#    #+#             */
-/*   Updated: 2020/09/30 03:23:20 by kyekim           ###   ########.fr       */
+/*   Updated: 2020/12/05 15:21:29 by kyekim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	i = -1;
 	if (dst2 > src2)
 		while ((int)(--n) >= 0)
-			dst2[n] = src2[n];
+			dst2[n] = src2[n];       // NULL <-- index   : segfault
 	else
 		while (++i < n)
 			dst2[i] = src2[i];

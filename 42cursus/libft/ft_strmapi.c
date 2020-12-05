@@ -6,7 +6,7 @@
 /*   By: kyekim <kyekim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 20:06:34 by kyekim            #+#    #+#             */
-/*   Updated: 2020/09/30 20:08:18 by kyekim           ###   ########.fr       */
+/*   Updated: 2020/12/05 15:32:32 by kyekim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char			*res;
+	char			*dup;
 	unsigned int	i;
 
-	if (!s || !f)
-		return (0);
+	if (s == NULL || f == NULL)
+		return (NULL);
+	if (!(dup = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1))))
+		return (NULL);
 	i = 0;
 	while (s[i])
-		++i;
-	if (!(res = (char *)malloc((i + 1) * sizeof(char))))
-		return (0);
-	res[i] = 0;
-	while (--i)
-		res[i] = f(i, s[i]);
-	res[0] = f(0, s[0]);
-	return (res);
+	{
+		dup[i] = f(i, s[i]);
+		i++;
+	}
+	dup[i] = 0;
+	return (dup);
 }

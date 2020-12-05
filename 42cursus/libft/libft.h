@@ -6,7 +6,7 @@
 /*   By: kyekim <kyekim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 15:36:45 by kyekim            #+#    #+#             */
-/*   Updated: 2020/10/01 01:09:58 by kyekim           ###   ########.fr       */
+/*   Updated: 2020/12/02 20:35:57 by kyekim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <strings.h>
+# include <stdbool.h>
 
 # define INT_MAX 2147483647
 # define INT_MIN -2147483648
