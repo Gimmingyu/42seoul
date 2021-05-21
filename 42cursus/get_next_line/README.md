@@ -39,7 +39,7 @@
   ```
   git clone https://github.com/DontBreakAlex/gnlkiller.git ; cd gnlkiller; cp ../get_next_line.c .; cp ../get_next_line_utils.c .; cp ../get_next_line.h .; ./run.sh;
   ```
-* [GNL*lover](https://github.com/charMstr/GNL_lover)
+* [GNL_lover](https://github.com/charMstr/GNL_lover)
   ```
   git clone https://github.com/charMstr/GNL_lover.git
   ```
