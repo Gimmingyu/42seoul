@@ -1,4 +1,4 @@
-# Push_Swap
+# push_swap
 * Grade: 105 / 100 (mandatory 100 + bonus 5)
 
 ### Summary
