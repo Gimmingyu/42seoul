@@ -6,7 +6,7 @@
 | 2 | [get_next_line](./get_next_line) | C | `static variable` `file descriptor` | 01/28/2021 | norm v2 |
 |   | [ft_printf](./ft_printf) | C | `variadic arguments` `UTF-8` `bitwise operation` | 02/27/2021 | norm v2 |
 |   | [fdf](./fdf) | C | `Graphic` | colsed | norm v3 |
-|   | [minitalk](./minitalk) | C | `Unix` | colsed | norm v3 |
+|   | [minitalk](./minitalk) | C | `Unix` | 24/06/2021 | norm v2 |
 | 3 | [ft_server](./ft_server) | Shell | `docker` `immutable infrastructure` `server` | 04/20/2021 |
 |   | [push_swap](./push_swap) | C | `algorithm` | 05/17/2021| norm v2 |
 |   | philosophers |  |  | closed |
